@@ -1,0 +1,1349 @@
+@charset "utf-8";
+
+body {
+    font-family: 'Zen Kaku Gothic New';
+    font-size: 12px;
+    color: #000000;
+}
+
+header {
+    background: url(../images/hero1.png) no-repeat center/cover;
+    width: 100%;
+    height: 667px;
+    position: relative;
+}
+
+/* 台中メインロゴ */
+header::after {
+    content: url(../images/main1.png);
+    position: absolute;
+    left: -10px;
+    top: -70px;
+    transform: scale(0.38);
+}
+
+/* TAIWANロゴ */
+.headerIkon {
+    width: 111px;
+    height: 45px;
+    margin-left: 20px;
+}
+
+/* PCのグローバルメニューを非表示に */
+.drawerTextPc {
+    visibility: collapse;
+}
+
+/* ドロワーアイコン */
+.drawerIkon::after {
+    content: url(../images/do1.png);
+    position: absolute;
+    right: 0px;
+}
+
+.drawerBtn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 48px;
+    height: 48px;
+}
+
+.drawerNav {
+    height: 100%;
+    width: 260px;
+    background-color: #000;
+    color: #fff;
+    display: block;
+}
+
+.drawerBtnCrosed img {
+    padding: 10px 10px 0 0;
+    object-fit: cover;
+    width: 48px;
+    height: 48px;
+}
+
+.drawerMenu {
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.drawerText {
+    text-align: center;
+    font-size: 24px;
+}
+
+.drawerText li {
+    padding-bottom: 28px;
+}
+
+.menuNum1 {
+    font-size: 30px;
+    margin: 32px auto 32px auto;
+}
+
+.menuNum2 {
+    padding-bottom: 40px;
+}
+
+.menuNum3 a,
+.menuNum4 a,
+.menuNum5 a,
+.menuNum6 a,
+.menuNum7 a {
+    border-bottom: 1px solid #fff;
+}
+
+#nav {
+    position: fixed;
+    right: -270px;
+    top: 0;
+    height: 100%;
+    width: 260px;
+    z-index: 999;
+}
+
+#nav.show {
+    transform: translate3d(-270px, 0, 0);
+}
+
+/* ドロワー開閉アニメーションスピード */
+#wrapper,
+#nav {
+    transition: transform 0.3s;
+}
+
+/* SNSアイコン */
+.snsIkon {
+    width: 38.9px;
+    height: 136px;
+    position: relative;
+}
+
+.facebook::after {
+    content: url(../images/sns1.png);
+    position: absolute;
+    left: 20px;
+    bottom: -270px;
+}
+
+.Instagram::after {
+    content: url(../images/sns2.png);
+    position: absolute;
+    left: 20px;
+    bottom: -320px;
+}
+
+.Twitter::after {
+    content: url(../images/sns3.png);
+    position: absolute;
+    left: 20px;
+    bottom: -370px;
+}
+
+/* 白い文字 */
+header p {
+    color: #FFFFFF;
+    font-weight: bold;
+    height: 57.6px;
+    width: 247px;
+    line-height: 19.2px;
+    font-size: 12px;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+
+/* パンくず */
+.panLink {
+    width: 100%;
+    height: 32px;
+    font-size: 16px;
+    line-height: 2;
+    border-bottom: 1px solid #000000;
+    margin-bottom: 40px;
+    padding-left: 20px;
+}
+
+.wrapper {
+    margin: 0 20px;
+}
+
+h2 {
+    font-size: 22px;
+    width: 158px;
+    height: 24px;
+    text-align: center;
+    margin: 40px auto;
+    position: relative;
+}
+
+h2 span {
+    font-size: 12px;
+}
+
+h2::before {
+    content: url(../images/mi1.png);
+    position: absolute;
+    left: -30px;
+    top: -10px;
+}
+
+h3 {
+    width: 118px;
+    height: 24px;
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+    margin: 20px auto 20px;
+    letter-spacing: 0.3em;
+}
+
+.Koubishichi {
+    width: 295px;
+    height: 211px;
+    margin: 0 20px 20px;
+}
+
+.koubishinchiText,
+.KoubishichiSubText,
+.SaikouKensonText,
+.SaikouensonSubText {
+    background-color: rgba(238, 162, 133, 0.2);
+    width: 295px;
+    margin: 0 20px 20px;
+    padding: 8px 36px;
+    line-height: 1.6;
+}
+
+.koubishinchiText {
+    height: 246.4px;
+}
+
+.KoubishichiSub {
+    width: 295px;
+    height: 150px;
+    margin: 0 20px 20px;
+}
+
+.KoubishichiSubText {
+    height: 54px;
+}
+
+.border1,
+.border2,
+.border3,
+.border4 {
+    width: 223px;
+    text-align: center;
+    margin: 40px auto 60px;
+    border-top: 1px solid #000000;
+}
+
+.SaikouKenson {
+    width: 295px;
+    height: 211px;
+    margin: 0 20px 20px;
+}
+
+.SaikouKensonText {
+    height: 208.4px;
+}
+
+.SaikouensonSub {
+    width: 295px;
+    height: 150px;
+    margin: 0 20px 20px;
+}
+
+.SaikouensonSubText {
+    height: 54px;
+    margin-bottom: 40px;
+}
+
+/* モーダル1・新天地西洋博物館 */
+
+/* モーダル開かれた際の背景状態 
+気になる場合背景色変更等*/
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(1, 128, 190, 0.9);
+}
+
+/* モーダル本体に対してのCSS */
+#modal .modal-content {
+    background-color: rgba(1, 128, 190, 0.9);
+    margin: 30vh auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    height: 426.6px;
+}
+
+/* JS用(要約：押されたらモーダル開く) */
+#modal.is-hidden {
+    display: none;
+}
+
+/* JS用(要約：押されたらモーダル閉じる) */
+#modal.is-shown {
+    display: block;
+}
+
+/* ドロワーメニュー参照 */
+#modal .close {
+    color: black;
+    float: right;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+/* ドロワーメニュー参照 */
+#modal .close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* モーダル２・アジア近代美術館 */
+#modal1 {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(1, 128, 190, 0.9);
+}
+
+/* モーダル本体に対してのCSS */
+#modal1 .modal-content {
+    background-color: rgba(1, 128, 190, 0.9);
+    margin: 30vh auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    height: 426.6px;
+}
+
+/* JS用(要約：押されたらモーダル開く) */
+#modal1.is-hidden {
+    display: none;
+}
+
+/* JS用(要約：押されたらモーダル閉じる) */
+#modal1.is-shown {
+    display: block;
+}
+
+/* ドロワーメニュー参照 */
+#modal1 .close {
+    color: black;
+    float: right;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+/* ドロワーメニュー参照 */
+#modal1 .close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* モーダル3・勤美術館 */
+#modal2 {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(1, 128, 190, 0.9);
+}
+
+/* モーダル本体に対してのCSS */
+#modal2 .modal-content {
+    background-color: rgba(1, 128, 190, 0.9);
+    margin: 30vh auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    height: 426.6px;
+}
+
+/* JS用(要約：押されたらモーダル開く) */
+#modal2.is-hidden {
+    display: none;
+}
+
+/* JS用(要約：押されたらモーダル閉じる) */
+#modal2.is-shown {
+    display: block;
+}
+
+/* ドロワーメニュー参照 */
+#modal2 .close {
+    color: black;
+    float: right;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+/* ドロワーメニュー参照 */
+#modal2 .close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* モーダル4・台中文学館 */
+#modal3 {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(1, 128, 190, 0.9);
+}
+
+/* モーダル本体に対してのCSS */
+#modal3 .modal-content {
+    background-color: rgba(1, 128, 190, 0.9);
+    margin: 30vh auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    height: 426.6px;
+}
+
+/* JS用(要約：押されたらモーダル開く) */
+#modal3.is-hidden {
+    display: none;
+}
+
+/* JS用(要約：押されたらモーダル閉じる) */
+#modal3.is-shown {
+    display: block;
+}
+
+/* ドロワーメニュー参照 */
+#modal3 .close {
+    color: black;
+    float: right;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+/* ドロワーメニュー参照 */
+#modal3 .close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* 以下モーダルの共通項目のCSS */
+.モーダルタイトル {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    width: 192px;
+    text-align: center;
+    margin: 36px 71.5px 40px;
+}
+
+.モーダル1 {
+    text-align: start;
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.モーダル説明 {
+    color: #fff;
+    font-weight: bold;
+    line-height: 19px;
+    margin-bottom: 20px;
+}
+
+.モーダル説明1 {
+    color: #fff;
+    font-weight: bold;
+    line-height: 19px;
+}
+
+.モーダル画像 {
+    margin-right: 20px;
+    margin-bottom: 40px;
+    width: 157.5px;
+    height: 165px;
+}
+
+.モーダル dl {
+    margin-bottom: 40px;
+}
+
+.modalSubPhoto {
+    display: flex;
+}
+
+.MuseumText {
+    width: 224px;
+    height: 38.4px;
+    margin: 12px 56px;
+    text-align: start;
+    line-height: 1.6;
+}
+
+.textBorder1,
+.textBorder2,
+.textBorder3 {
+    width: 223px;
+    text-align: center;
+    border-top: 1px solid #000000;
+}
+
+.textBorder1 {
+    margin: 60px auto 12px;
+}
+
+.textBorder2 {
+    margin: 0 auto 60px;
+}
+
+.MuseumCategory1,
+.MuseumCategory2,
+.MuseumCategory3,
+.MuseumCategory4 {
+    width: 108px;
+    height: 38.4px;
+    margin: 0 20px;
+    line-height: 1.6;
+}
+
+.MuseumCategory1 span,
+.MuseumCategory2 span,
+.MuseumCategory3 span,
+.MuseumCategory4 span {
+    font-weight: bold;
+}
+
+.businessHours1,
+.businessHours2,
+.businessHours3,
+.businessHours4 {
+    width: 108px;
+    height: 36px;
+    font-family: Noto SansJP;
+    margin-left: 210px;
+    margin-bottom: 40px;
+    border: 4px solid rgba(238, 162, 133, 0.2);
+    line-height: 0.5;
+}
+
+.businessModal {
+    width: 84px;
+    height: 12px;
+    text-align: center;
+    margin: 12px;
+}
+
+.Shintenchi,
+.Museum2,
+.Museum3,
+.Museum4 {
+    width: 295px;
+    height: 135px;
+    margin: 8px 20px;
+}
+
+.Miyahara {
+    font-size: 24px;
+    width: 96px;
+    height: 24px;
+    text-align: center;
+    margin: 60px auto 12px;
+}
+
+.MiyaharaText1 {
+    width: 223px;
+    height: 57.6px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.MiyaharaText2,
+.MiyaharaText3 {
+    width: 223px;
+    margin: 0 auto;
+    line-height: 1.92;
+}
+
+.MiyaharaImg1,
+.MiyaharaImg2 {
+    width: 223px;
+    height: 148px;
+}
+
+.MiyaharaImg1 {
+    margin: 20px 56px;
+}
+
+.MiyaharaSubImg {
+    display: flex;
+}
+
+.MiyaharaSubImg1,
+.MiyaharaSubImg2 {
+    width: 157.5px;
+    height: 225px;
+    margin: 20px 20px 20px 0;
+}
+
+.MiyaharaImg2 {
+    margin: 20px 56px 40px;
+}
+
+.textBorder3 {
+    margin: 0 auto 12px;
+}
+
+.textBorder4 {
+    margin: 0 auto 12px;
+}
+
+/* トップ戻る */
+.topReturn {
+    width: 48px;
+    height: 48px;
+    position: relative;
+    right: -320px;
+    bottom: 0;
+}
+
+/* フッターエリア */
+footer>.innerWrap {
+    /* background-color: rgba(0, 122, 183, 0.2); */
+    background-color: #007AB7;
+}
+
+.flagOfTaiwan {
+    width: 32px;
+    height: 24px;
+    margin: 20px 171px;
+}
+
+footer p {
+    color: #fff;
+    padding: 12px 100px;
+
+}
+
+footer li {
+    padding-bottom: 4px;
+    border-bottom: 1px solid #fff;
+    line-height: 1.5;
+}
+
+.footerNav {
+    width: 195px;
+    height: 167px;
+    margin: 20px auto 40px;
+}
+
+.footerNav a {
+    color: #fff;
+    font-size: 12px;
+}
+
+.footerRogo {
+    width: 71px;
+    height: 28px;
+    float: left;
+    margin: 0 22px 0 20px;
+}
+
+.footRogos {
+    width: 150px;
+    margin-bottom: 22px;
+    display: flex;
+    justify-content: space-between;
+    /* float:left;
+    padding-bottom:22px; */
+}
+
+.foooterRogos img {
+    display: block;
+    margin: 20px;
+}
+
+.footerText {
+    text-align: center;
+    color: #fff;
+    border-top: 1px solid #6CBAD6;
+}
+
+/* ローディング */
+#loading {
+    /*ローディングにかかる時間*/
+    transition: all 4s;
+    background-color: #007AB7;
+    z-index: 10000;
+    position: fixed;
+    /* top, right, bottom, left に対応する一括指定*/
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*主軸の方向や向き（通常または逆方向）を定義し
+    今回は積み重なるように配置する */
+    flex-direction: column;
+}
+
+.spin {
+    background-color: #007AB7;
+}
+
+.loaded {
+    /*要素の不透明度を設定します。 不透明度は要素の裏にある
+    コンテンツが隠れる度合いであり、透明度の逆*/
+    opacity: 0;
+    /*要素はあるけど見えない状態*/
+    visibility: hidden;
+}
+
+/* スマホ版ハンバーガー */
+/* .drawerTextPc,
+.drawerNav{
+    display:none;
+}
+ */
+
+/* ↓PCモード↓ */
+@media screen and (min-width: 768px) {
+    body {
+        width: 1366px;
+        font-size: 20px;
+    }
+
+    header {
+        width: 1366px;
+        height: 768px;
+    }
+
+    /* ドロワーメニューはそのままPC版向けに新たに作成し表示させる */
+    .drawerBtn {
+        display: none;
+    }
+
+    .drawerNav {
+        visibility: collapse;
+    }
+
+    .drawerTextPc {
+        visibility: visible;
+    }
+
+    .drawerTextPc {
+        display: block;
+        width: 700px;
+        position: absolute;
+        top: 40px;
+        left: 560px;
+        border-bottom: none;
+    }
+
+    .globalMenu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .drawerTextPc .globalMenu li a {
+        font-size: 24px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .drawerTextPc .globalMenu li a:hover {
+        text-decoration: underline;
+    }
+
+    /* TAIWANロゴ */
+    header img {
+        width: 133px;
+        height: 54px;
+        margin-left: 83px;
+        margin-top: 20px;
+    }
+
+    /* ハンバーガー消す */
+    .drawerIkon {
+        display: none;
+    }
+
+    .snsIkon {
+        width: 38.9px;
+        height: 176px;
+        margin-left: 103px;
+
+    }
+
+    .facebook,
+    .Instagram,
+    .Twitter {
+        width: 32px;
+        height: 32px;
+    }
+
+    .facebook::after {
+        left: 20px;
+        bottom: -320px;
+    }
+
+    .Instagram::after {
+        left: 20px;
+        bottom: -400px;
+    }
+
+    .Twitter::after {
+        left: 20px;
+        bottom: -485px;
+    }
+
+    /* 台中メインロゴ */
+    header::after {
+        left: 340px;
+        top: 0px;
+        transform: scale(0.75);
+    }
+
+    /* 白い文字 */
+    header p {
+        height: 96px;
+        width: 467px;
+        font-size: 20px;
+        line-height: 32px;
+        position: absolute;
+        bottom: 10px;
+        right: 83px;
+    }
+
+    /* パンくず */
+    .panLink {
+        width: 100%;
+        height: 60px;
+        font-size: 20px;
+        line-height: 2;
+        border-bottom: 1px solid #000000;
+        margin-bottom: 40px;
+        padding: 10px 83px;
+    }
+
+    .wrapper {
+        margin: 0 83px;
+    }
+
+    h2 {
+        font-size: 48.24px;
+        width: 322px;
+        height: 48px;
+        text-align: center;
+        margin: 24px 123px 120px;
+        position: relative;
+    }
+
+    h2 span {
+        font-size: 20px;
+    }
+
+    h2::before {
+        left: 40px;
+        top: 20px;
+        transform: scale(2.2);
+    }
+
+    .koubishinchiArticle {
+        display: grid;
+        grid-template-rows: 80px 360px 40px 144px;
+        grid-template-columns: 600px 80px 500px;
+        margin-bottom: 80px;
+    }
+
+    h3 {
+        grid-row: 1/2;
+        grid-column: 1/2;
+        width: 177px;
+        height: 36px;
+        font-size: 36px;
+        font-weight: bold;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        letter-spacing: 0.2em;
+    }
+
+    .Koubishichi {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        width: 600px;
+        height: 360px;
+        margin: 0;
+    }
+
+    .koubishinchiText {
+        grid-row: 2/3;
+        grid-column: 3/4;
+        width: 500px;
+        height: 360px;
+        margin: 0;
+        padding: 20px 40px;
+        line-height: 1.5;
+    }
+
+    .KoubishichiSub {
+        grid-row: 4/5;
+        grid-column: 1/2;
+        width: 600px;
+        height: 144px;
+        object-fit: cover;
+        object-position: 0 50%;
+        margin: 0;
+    }
+
+    .KoubishichiSubText {
+        grid-row: 4/5;
+        grid-column: 3/4;
+        width: 500px;
+        height: 144px;
+        margin: 0;
+        padding: 40px;
+    }
+
+    .border1,
+    .border2,
+    .border3,
+    .border4 {
+        width: 480px;
+        text-align: center;
+        margin-bottom: 80px;
+    }
+
+    .SaikouKensonArticle {
+        display: grid;
+        grid-template-rows: 80px 368px 40px 144px;
+        grid-template-columns: 600px 80px 500px;
+        margin-bottom: 80px;
+    }
+
+    .SaikouKenson {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        width: 600px;
+        height: 368px;
+        margin: 0;
+    }
+
+    .SaikouKensonText {
+        grid-row: 2/3;
+        grid-column: 3/4;
+        width: 500px;
+        height: 368px;
+        margin: 0;
+        padding: 40px;
+    }
+
+    .SaikouensonSub {
+        grid-row: 4/5;
+        grid-column: 1/2;
+        width: 600px;
+        height: 144px;
+        object-fit: cover;
+        object-position: 0 0;
+        margin: 0;
+    }
+
+    .SaikouensonSubText {
+        grid-row: 4/5;
+        grid-column: 3/4;
+        width: 500px;
+        height: 144px;
+        margin: 0;
+        padding: 40px;
+    }
+
+    .MuseumSec h2 {
+        position: relative;
+        right: -680px;
+    }
+
+    .MuseumText {
+        font-size: 18px;
+        width: 420px;
+        height: 110px;
+        text-align: start;
+        line-height: 1.6;
+        padding-top: 25px;
+        margin-left: 20px;
+    }
+
+    .textBorder1,
+    .textBorder2 {
+        width: 420px;
+        margin: 20px;
+    }
+
+    .textBorder2 {
+        margin-bottom: 80px;
+    }
+
+    .MuseumCollection {
+        display: grid;
+        grid-template-rows: 55px 100px 300px 76px 40px 55px 100px 300px 76px;
+        grid-template-columns: 530px 80px 530px;
+        margin-bottom: 80px;
+    }
+
+    .Shintenchi,
+    .Museum2,
+    .Museum3,
+    .Museum4 {
+        width: 530px;
+        height: 270px;
+        margin: 0;
+    }
+
+    .MuseumCategory1,
+    .MuseumCategory2,
+    .MuseumCategory3,
+    .MuseumCategory4 {
+        width: 324px;
+        height: 115.2px;
+        margin: 20px 20px;
+        font-size: 36px;
+        line-height: 1.7;
+    }
+
+    .MuseumCategory1 {
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+
+    .MuseumCategory1 span {
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+
+    .Shintenchi {
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+
+    .businessHours1,
+    .businessHours2,
+    .businessHours3,
+    .businessHours4 {
+        width: 212px;
+        height: 76px;
+        margin-left: 320px;
+    }
+
+    .businessModal {
+        font-size: 20px;
+        width: 140px;
+        height: 20px;
+        margin: 30px;
+    }
+
+    .businessHours1 {
+        grid-row: 4/5;
+        grid-column: 1/2;
+    }
+
+    .MuseumCategory2 {
+        grid-row: 1/2;
+        grid-column: 3/4;
+    }
+
+    .MuseumCategory2 span {
+        grid-row: 2/3;
+        grid-column: 3/4;
+    }
+
+    .Museum2 {
+        grid-row: 3/4;
+        grid-column: 3/4;
+    }
+
+    .businessHours2 {
+        grid-row: 4/5;
+        grid-column: 3/4;
+    }
+
+    .MuseumCategory3 {
+        grid-row: 6/7;
+        grid-column: 1/2;
+    }
+
+    .MuseumCategory3 span {
+        grid-row: 7/8;
+        grid-column: 1/2;
+    }
+
+    .Museum3 {
+        grid-row: 8/9;
+        grid-column: 1/2;
+    }
+
+    .businessHours3 {
+        grid-row: 9/10;
+        grid-column: 1/2;
+    }
+
+    .MuseumCategory4 {
+        grid-row: 6/7;
+        grid-column: 3/4;
+    }
+
+    .MuseumCategory4 span {
+        grid-row: 7/8;
+        grid-column: 3/4;
+    }
+
+    .Museum4 {
+        grid-row: 8/9;
+        grid-column: 3/4;
+    }
+
+    .businessHours4 {
+        grid-row: 9/10;
+        grid-column: 3/4;
+    }
+
+    /* ↓モーダル↓ */
+    #modal,
+    #modal1,
+    #modal2,
+    #modal3 {
+        width: 1366px;
+    }
+
+    #modal .modal-content,
+    #modal1 .modal-content,
+    #modal2 .modal-content,
+    #modal3 .modal-content {
+        width: 900px;
+        height: 671.2px;
+        margin-right: 233px;
+        margin-left: 233px;
+    }
+
+    .モーダル画像 {
+        width: 380px;
+        height: 380px;
+        margin-left: 30px;
+    }
+
+    .モーダル1 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .Miyahara {
+        font-size: 36px;
+        margin-left: 213px;
+        margin-top: 20px;
+        width: 144px;
+        height: 36px;
+    }
+
+    .textBorder3 {
+        width: 420px;
+        margin-top: 20px;
+        margin-left: 75px;
+    }
+
+    .MiyaharaText1 {
+        width: 420px;
+        height: 96px;
+        margin-top: 20px;
+        margin-left: 75px;
+        margin-bottom: 80px;
+        line-height: 1.6;
+    }
+
+    .sweetsSec1 {
+        display: grid;
+        grid-template-rows: 346px 60px;
+        grid-template-columns: 560px 60px 560px;
+    }
+
+    .MiyaharaImg1 {
+        grid-row: 1/2;
+        grid-column: 1/2;
+        width: 560px;
+        height: 346px;
+        margin: 0;
+    }
+
+    .MiyaharaText2 {
+        grid-row: 1/2;
+        grid-column: 3/4;
+        width: 500px;
+        height: 352px;
+        margin: 40px 68px;
+    }
+
+    .MiyaharaSubImg {
+        display: grid;
+        grid-template-rows: 600px 60px;
+        grid-template-columns: 120px 400px 80px 80px 400px 120px;
+    }
+
+    .MiyaharaSubImg1 {
+        grid-row: 1/2;
+        grid-column: 2/3;
+        width: 400px;
+        height: 600px;
+        margin: 0;
+    }
+
+    .MiyaharaSubImg2 {
+        grid-row: 1/2;
+        grid-column: 5/6;
+        width: 400px;
+        height: 600px;
+        margin: 0;
+    }
+
+    .sweetsSec2 {
+        display: grid;
+        grid-template-rows: 500px 60px;
+        grid-template-columns: 560px 60px 560px;
+    }
+
+    .MiyaharaText3 {
+        grid-row: 1/2;
+        grid-column: 1/2;
+        margin: 128px 40px;
+        width: 420px;
+        height: 96px;
+    }
+
+    .MiyaharaImg2 {
+        grid-row: 1/2;
+        grid-column: 3/4;
+        width: 560px;
+        height: 346px;
+        margin: 0;
+    }
+
+    /* top戻る */
+    .topReturn {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        left: 1250px;
+    }
+
+    /* フッター */
+    .flagOfTaiwan {
+        width: 64px;
+        height: 48px;
+        margin: 20px 650px;
+    }
+
+    .footerNav {
+        width: 332px;
+        height: 292px;
+        margin-left: 103px;
+        margin-bottom: 20px;
+    }
+
+    .footerNav a {
+        font-size: 20px;
+        line-height: 1.6;
+    }
+
+    .footerSec {
+        display: grid;
+        grid-template-rows: 116px 292px;
+        grid-template-columns: 103px 332px 120px 270px 183px 103px;
+    }
+
+    .footerNav {
+        grid-row: 2/3;
+        grid-column: 2/3;
+        margin: 0;
+        margin-top: 40px;
+    }
+
+    .footerRogo {
+        width: 256px;
+        height: 103px;
+        grid-row: 2/3;
+        grid-column: 4/5;
+        margin: 0;
+        margin-top: 180px;
+    }
+
+    .footRogos {
+        width: 183px;
+        height: 32px;
+        grid-row: 2/3;
+        grid-column: 6/7;
+        margin: 0;
+        margin-top: 240px;
+    }
+
+    #loading {
+        /*ローディングにかかる時間*/
+        transition: all 4s;
+        background-color: #007AB7;
+        z-index: 10000;
+        position: fixed;
+        /* top, right, bottom, left に対応する一括指定*/
+        inset: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*主軸の方向や向き（通常または逆方向）を定義し
+        今回は積み重なるように配置する */
+        flex-direction: column;
+    }
+
+    .spin {
+        background-color: #007AB7;
+    }
+
+    .loaded {
+        /*要素の不透明度を設定します。 不透明度は要素の裏にある
+        コンテンツが隠れる度合いであり、透明度の逆*/
+        opacity: 0;
+        /*要素はあるけど見えない状態*/
+        visibility: hidden;
+
+    }
+}

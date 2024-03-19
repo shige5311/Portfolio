@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../common/reset.css">
+    <link rel="stylesheet" href="styles/(taichupage)style.css">
+
+    <title> TAIWAN | taichu </title>
+</head>
+
+<body>
+    <div id="loading">
+        <img class="spin" src="images/pclogo.png" alt="spin">
+    </div>
+    <header>
+        <img src="images/logo.svg" alt="logo" class="headerIkon">
+        <div class="snsIkon">
+            <span class="facebook"></span>
+            <span class="Instagram"></span>
+            <span class="Twitter"></span>
+        </div>
+        <img src="images/do1.png" class="drawerBtn" id="DrawerBtn">
+        <nav class="drawerNav" id="nav">
+            <div class="drawerMenu">
+                <img src="images/do2.png" class="drawerImg">
+                <!-- 仮画像はCSSに差し替える -->
+                <img src="images/do3.png" class="drawerBtnCrosed">
+            </div>
+            <ul class="drawerText">
+                <li class="menuNum1"><a href="#">Menu</a></li>
+                <li class="menuNum2"><a href="../index.html">TOP</a></li>
+                <li class="menuNum3"><a href="../taipei/index.html">台北</a></li>
+                <li class="menuNum4"><a href="../taichu/index.html">台中</a></li>
+                <li class="menuNum5"><a href="../tainan/index.html">台南</a></li>
+                <li class="menuNum6"><a href="#">当サイトのポリシー</a></li>
+                <li class="menuNum7"><a href="#">お問い合わせ</a></li>
+            </ul>
+        </nav>
+        <nav class="drawerTextPc">
+            <ul class="globalMenu">
+                <li><a href="../index.html">TOP</a></li>
+                <li><a href="../taipei/index.html">台北</a></li>
+                <li><a href="../taichu/index.html">台中</a></li>
+                <li><a href="../tainan/index.html">台南</a></li>
+                <li><a href="#">当サイトのポリシー</a></li>
+                <li><a href="#">お問い合わせ</a></li>
+            </ul>
+        </nav>
+
+        <p>台湾で2番目の大都市を誇る台中市。台中市は台湾中部の台中盆地にあり、いくつもの河川が台中市の中心地を貫いています。</p>
+    </header>
+    <main>
+        <!-- パンくず -->
+        <div class="panLink"><a href="#">Top</a> ＞<a href="#">Travel</a> ＞<a href="#">台中</a></div>
+        <div class="wrapper">
+            <section><!-- attraction観光名所 -->
+                <h2>Attraction<span>観光名所<span></h2>
+                <div class="koubishinchiArticle">
+                    <h3>高美湿地</h3>
+                    <img src="images/img1.png" alt="高美湿地main" class="Koubishichi">
+                    <p class="koubishinchiText">
+                        台中から北西へ約20㎞、大甲渓の河口に広がるおよそ1500ヘクタールの高美湿地は、天気など条件が重なると周りの風景を鏡面のように反射させることから、
+                        「台湾のウユニ塩湖」と呼ばれ近年注目を集めている。
+                        湿地には100種類以上の鳥が生息しており、バードウォッチングを楽しんでいる人も多い。
+                        周辺には海から吹き付ける風を利用した風力発電の施設が立ち、人工物と自然の景色が融合して独特の景観をつくり出している。まだまだ穴場のスポットです。
+                    </p>
+                    <img src="images/img2.png" alt="高美湿地sub" class="KoubishichiSub">
+                    <p class="KoubishichiSubText">おすすめ観光時間は干潮時日暮れとのタイミングが狙い時です。</p>
+                </div>
+                <div class="border1"></div>
+                <div class="SaikouKensonArticle">
+                    <h3>彩虹眷村</h3>
+                    <img src="images/img3.png" alt="彩虹眷村main" class="SaikouKenson">
+                    <p class="SaikouKensonText">
+                        台湾中部台中市には「彩虹眷村」というあまりにもインパクトのある場所があります。一度見たら忘れられない鮮やかな色使いの絵で埋め尽くされたこの地区、
+                        日本語にすると「虹の村」と称されるこの場所は、家にも壁にも道路にもびっしりと絵が描かれています。
+                        そしてこの絵を描いたのは、たった一人のおじいちゃんなのです。
+                        今回は見れば元気になる台中市の必見スポットをご紹介します。
+                    </p>
+                    <img src="images/img4.png" alt="彩虹眷村sub" class="SaikouensonSub">
+                    <p class="SaikouensonSubText">
+                        住民の方がいるので早朝や夜の訪問は控え、日中に訪れましょう。
+                    </p>
+                </div>
+                <div class="border2"></div>
+            </section>
+        </div>
+        <div class="wrapper">
+            <section class="MuseumSec"><!-- museum博物館 -->
+                <h2>Museum<span>博物館</span></h2>
+                <div class="textBorder1"></div>
+                <p class="MuseumText">文化の街とも呼ばれる台中。その中でも
+                    おすすめの博物館をご紹介します。
+                </p>
+                <div class="textBorder2"></div>
+                <div class="MuseumCollection">
+                    <h4 class="MuseumCategory1">アンティーク美術館<br>
+                        <span>新天地西洋博物館</span>
+                    </h4>
+                    <img src="images/img5.png" alt="" class="Shintenchi" id="Shintenchi">
+                    <div class="businessHours1">
+                        <!-- モーダルを開く為の条件設定 -->
+                        <button onclick="openModal()">
+                            <!-- 開く条件先を指定 -->
+                            <a href="#Shintenchi">
+                                <p class="businessModal">営業時間を見る</p>
+                            </a>
+                        </button>
+                        <!-- モーダル本体【JS実装の為】のクラス指定 -->
+                        <div id="modal" class="modal is-hidden">
+                            <!-- モーダル本体【CSS実装の為】のクラス指定 -->
+                            <div class="modal-content">
+                                <!-- モーダルを閉じるボタン【JS実装の為】のクラス指定 -->
+                                <span class="close" onclick="closeModal()">
+                                    <!-- 閉じる条件先を指定 -->
+                                    <a href="#Shintenchi"><img class="スマホ" src="images/mo1.png"></a>
+                                    <!-- <a href="#"><img class="PC" src="images/PCモーダル閉じる画像.png"></a>  -->
+                                </span>
+                                <!-- モーダル内部のコンテンツ -->
+                                <!-- Museumモーダル１ -->
+                                <div class="モーダル">
+                                    <p class="モーダルタイトル">新天地西洋博物館</p>
+                                    <div class="modalSubPhoto">
+                                        <span class="スマホ"><img class="モーダル画像" src="images/img6.png"></span>
+                                        <span class="PC"><img class="モーダル画像" src="images/img7.png"></span>
+                                    </div>
+                                    <p class="モーダル説明"></p>
+                                    <div class="モーダル1">
+                                        <p>営業時間</p>
+                                        <p>全日：10：00～18：00</p>
+                                        <p>住所：台湾台中市東区早渓東路一段456号1階
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="MuseumCategory2">科学美術館<br>
+                        <span>アジア近代美術館</span>
+                    </h4>
+                    <img src="images/img8.png" alt="" class="Museum2" id="Museum2">
+                    <div class="businessHours2">
+                        <!-- モーダルを開く為の条件設定 -->
+                        <button onclick="openModal1()">
+                            <!-- 開く条件先を指定 -->
+                            <a href="#Museum2">
+                                <p class="businessModal">営業時間を見る</p>
+                            </a>
+                        </button>
+                        <!-- モーダル本体【JS実装の為】のクラス指定 -->
+                        <div id="modal1" class="modal is-hidden">
+                            <!-- モーダル本体【CSS実装の為】のクラス指定 -->
+                            <div class="modal-content">
+                                <!-- モーダルを閉じるボタン【JS実装の為】のクラス指定 -->
+                                <span class="close" onclick="closeModal1()">
+                                    <!-- 閉じる条件先を指定 -->
+                                    <a href="#Museum2"><img class="スマホ" src="images/mo1.png"></a>
+                                    <!-- <a href="#"><img class="PC" src="images/PCモーダル閉じる画像.png"></a>  -->
+                                </span>
+                                <!-- モーダル内部のコンテンツ -->
+                                <!-- Museumモーダル2 -->
+                                <div class="モーダル">
+                                    <p class="モーダルタイトル">アジア近代美術館</p>
+                                    <div class="modalSubPhoto">
+                                        <span class="スマホ"><img class="モーダル画像" src="images/img9.png"></span>
+                                        <span class="PC"><img class="モーダル画像" src="images/img10.png"></span>
+                                    </div>
+                                    <p class="モーダル説明"></p>
+                                    <div class="モーダル1">
+                                        <p>営業時間</p>
+                                        <p>全日：9：30～17：00</p>
+                                        <p>住所：413台湾台中市霧峰區柳豐路500號
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="MuseumCategory3">屋内外美術館<br>
+                        <span>勤美術館</span>
+                    </h4>
+                    <img src="images/img11.png" alt="" class="Museum3" id="Museum3">
+                    <div class="businessHours3">
+                        <!-- モーダルを開く為の条件設定 -->
+                        <button onclick="openModal2()">
+                            <!-- 開く条件先を指定 -->
+                            <a href="#Museum3">
+                                <p class="businessModal">営業時間を見る</p>
+                            </a>
+                        </button>
+                        <!-- モーダル本体【JS実装の為】のクラス指定 -->
+                        <div id="modal2" class="modal is-hidden">
+                            <!-- モーダル本体【CSS実装の為】のクラス指定 -->
+                            <div class="modal-content">
+                                <!-- モーダルを閉じるボタン【JS実装の為】のクラス指定 -->
+                                <span class="close" onclick="closeModal2()">
+                                    <!-- 閉じる条件先を指定 -->
+                                    <a href="#Museum3"><img class="スマホ" src="images/mo1.png"></a>
+                                    <!-- <a href="#"><img class="PC" src="images/PCモーダル閉じる画像.png"></a>  -->
+                                </span>
+                                <!-- モーダル内部のコンテンツ -->
+                                <!-- Museumモーダル３ -->
+                                <div class="モーダル">
+                                    <p class="モーダルタイトル">勤美術館</p>
+                                    <div class="modalSubPhoto">
+                                        <span class="スマホ"><img class="モーダル画像" src="images/img12.png"></span>
+                                        <span class="PC"><img class="モーダル画像" src="images/img13.png"></span>
+                                    </div>
+                                    <p class="モーダル説明"></p>
+                                    <div class="モーダル1">
+                                        <p>営業時間</p>
+                                        <p>全日：09：00～17：00</p>
+                                        <p>住所：台中市西區館前路71號
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="MuseumCategory4">歴史文学を学ぶ<br>
+                        <span>台中文学館</span>
+                    </h4>
+                    <img src="images/img14.png" alt="" class="Museum4" id="Museum4">
+                    <div class="businessHours4">
+                        <!-- モーダルを開く為の条件設定 -->
+                        <button onclick="openModal3()">
+                            <!-- 開く条件先を指定 -->
+                            <a href="#Museum4">
+                                <p class="businessModal">営業時間を見る</p>
+                            </a>
+                        </button>
+                        <!-- モーダル本体【JS実装の為】のクラス指定 -->
+                        <div id="modal3" class="modal is-hidden">
+                            <!-- モーダル本体【CSS実装の為】のクラス指定 -->
+                            <div class="modal-content">
+                                <!-- モーダルを閉じるボタン【JS実装の為】のクラス指定 -->
+                                <span class="close" onclick="closeModal3()">
+                                    <!-- 閉じる条件先を指定 -->
+                                    <a href="#Museum4"><img class="スマホ" src="images/mo1.png"></a>
+                                    <!-- <a href="#"><img class="PC" src="images/PCモーダル閉じる画像.png"></a>  -->
+                                </span>
+                                <!-- モーダル内部のコンテンツ -->
+                                <!-- Museumモーダル４ -->
+                                <div class="モーダル">
+                                    <p class="モーダルタイトル">台中文学館</p>
+                                    <div class="modalSubPhoto">
+                                        <span class="スマホ"><img class="モーダル画像" src="images/img15.png"></span>
+                                        <span class="PC"><img class="モーダル画像" src="images/img16.png"></span>
+                                    </div>
+                                    <p class="モーダル説明"></p>
+                                    <div class="モーダル1">
+                                        <p>営業時間</p>
+                                        <p>全日：9：00～17：00</p>
+                                        <p>住所：台中市楽群街38号
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="border3"></div>
+        <div class="wrapper">
+            <section><!-- sweetsスイーツ -->
+                <h2>Sweets<span>スイーツ</span></h2>
+                <p class="Miyahara">宮原眼科</p>
+                <div class="textBorder3"></div>
+                <p class="MiyaharaText1">
+                    台湾全土でも大人気のスイーツが集まる台中市で絶対人気を誇るお店、宮原眼科をご紹介します。
+                </p>
+                <div class="sweetsSec1">
+                    <img src="images/img17.png" alt="" class="MiyaharaImg1">
+                    <p class="MiyaharaText2">
+                        台湾の台中にある宮原眼科は、日本統治時代の1927年、日本人の宮原武熊という眼科医が開院し、1945年までは台中で最大規模の眼科診療所でした。
+                        宮原医師が日本に帰国後、パイナップルケーキとチーズケーキで有名な台湾の日出グループが、1年半の時間を費やし建物を修復し、店舗にしています。
+                    </p>
+                </div>
+                <div class="MiyaharaSubImg">
+                    <img src="images/img18.png" alt="" class="MiyaharaSubImg1">
+                    <img src="images/img19.png" alt="" class="MiyaharaSubImg2">
+                </div>
+                <div class="sweetsSec2">
+                    <p class="MiyaharaText3">
+                        そして現在は、宮原眼科の特徴ある建物や、そこで売られている台湾グルメやスイーツを楽しむ人々で、とても賑わっています。
+                    </p>
+                    <img src="images/img20.png" alt="" class="MiyaharaImg2">
+                </div>
+                <div class="border4"></div>
+            </section>
+        </div>
+        <!-- トップページ戻るアイコン -->
+        <a class="pagetop" href="#">
+            <div class="pagetop__arrow">
+                <img class="topReturn" src="images/top1.png">
+            </div>
+        </a>
+        <footer>
+            <div class="innerWrap">
+                <div class="footerSec"><img class='flagOfTaiwan' src="images/img21.png" alt="台湾の国旗の画像">
+                    <ul class="footerNav">
+                        <li><a href="../index.html">Topへ戻る</a></li>
+                        <li><a href="../taipei/index.html">台北</a></li>
+                        <li><a href="../taichu/index.html">台中</a></li>
+                        <li><a href="../tainan/index.html">台南</a></li>
+                        <li><a href="#">当サイトのポリシー</a></li>
+                        <li><a href="#">お問い合わせ</a></li>
+                    </ul>
+                    <img src="images/fo1.png" alt="台南ロゴ" class="footerRogo">
+                    <div class="footRogos">
+                        <img src="images/sns1.png" href="#" alt="フェイスブックロゴ">
+                        <img src="images/sns2.png" href="#" alt="インスタロゴ">
+                        <img src="images/sns3.png" href="#" alt="ツイッターロゴ">
+                    </div>
+                </div>
+                <div class="footerText">
+                    <p><small>Copyright(c)2023TAIWAN.travel.cc</small></p>
+                </div>
+            </div>
+        </footer>
+        <script src="../common/jquery-3.4.1.min.js"></script>
+        <script src="../common/scripts.js"></script>
+</body>
+
+</html>

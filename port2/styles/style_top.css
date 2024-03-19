@@ -1,0 +1,1151 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.drawerBtn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+/*PC版のメニューの表示とブロック要素を消すプロパティで表示崩れを防止 */
+.drawerTextPc {
+  visibility: collapse;
+}
+
+/* ドロワーメニュー*/
+.drawerNav {
+  height: 80vh;
+  width: 260px;
+  background-color: #000;
+  color: #fff;
+}
+
+.drawerBtnCrosed {
+  margin: 10px 10px 0 0;
+}
+
+.drawerMenu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.drawerText {
+  text-align: center;
+  font-size: 24px;
+}
+
+.drawerText li {
+  padding-bottom: 28px;
+}
+
+.menuNum1 {
+  font-size: 30px;
+  margin: 32px auto 32px auto;
+}
+
+.menuNum2 {
+  padding-bottom: 40px;
+}
+
+.menuNum3 a,
+.menuNum4 a,
+.menuNum5 a,
+.menuNum6 a,
+.menuNum7 a {
+  border-bottom: 1px solid #fff;
+}
+
+#nav {
+  position: relative;
+  left: 56px;
+  top: 0;
+  display: none;
+}
+
+#nav.show {
+  display: block;
+}
+
+.drawerBtnCrosed {
+  float: right;
+}
+
+/* #wrapper, #nav {
+  transition: transform 0.3s;
+} */
+
+header {
+  height: 677px;
+  background-image: url(../images/HeroFull.png);
+  background-size: cover;
+}
+
+main {
+  text-align: center;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+
+p {
+  font-size: 12px;
+}
+
+.syo_kai {
+  height: 806px;
+}
+
+.gall {
+  height: 685px;
+  background-color: #f4f4f4;
+}
+
+.tra {
+  height: 807.8px;
+  background-color: #f4f4f4;
+}
+
+.eve {
+  height: 1116px;
+  padding-top: 20px;
+  background-color: #f4f4f4;
+}
+
+.kihon {
+  height: 544px;
+  background-color: #f4f4f4;
+}
+
+.i_con {
+  display: flex;
+  flex-direction: column;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: 20px;
+  top: 461px;
+}
+
+.i_con img {
+  margin-bottom: 20px;
+  /* アイコンの間にマージンを追加 */
+}
+
+.b_logo {
+  position: absolute;
+  top: 200px;
+  left: 20px;
+}
+
+.Sho_kai1,
+.Sho_kai2 {
+  width: 335px;
+  height: 139px;
+}
+
+.syo_kai img {
+  margin-top: 20px;
+}
+
+h3 {
+  font-size: 20px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.s_h1 {
+  background-image: url(../images/syoukai1.png);
+  height: 407px;
+  background-size: cover;
+}
+
+.s_h2 p {
+  width: 223px;
+  height: 96px;
+  margin: 0 auto;
+  letter-spacing: 0.02em;
+  text-align: justify;
+  padding-top: 9px;
+  padding-bottom: 15px;
+}
+
+.eve img {
+  width: 335px;
+  height: 194px;
+}
+
+.s_h2 {
+  background-image: url(../images/syoukai2.png);
+  background-size: cover;
+  height: 407px;
+  padding-top: 20px;
+}
+
+.border1,
+.border2,
+.border3,
+.border4,
+.border5,
+.border6,
+.border7,
+.border8 {
+  width: 223px;
+  height: 1px;
+  background-color: #333333;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 20px auto 60px;
+  font-size: 24px;
+  background: url(../images/syoukai3.png) no-repeat center/cover;
+  width: 220px;
+  height: 40px;
+  padding-top: 8px;
+}
+
+span {
+  font-size: 12px;
+}
+
+.tra p {
+  width: 223px;
+  margin: 0 auto;
+  padding: 12px 0;
+  border-top: solid 1px #333333;
+  border-bottom: solid 1px #333333;
+  text-align: justify;
+}
+
+.position img {
+  width: 180px;
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+
+.size img {
+  width: 59px;
+  position: absolute;
+}
+
+.position {
+  position: relative;
+}
+
+.pei_rink {
+  left: 256px;
+  top: 2492px;
+}
+
+.tyu_rink {
+  left: 62px;
+  top: 2525px;
+}
+
+.nan_rink {
+  left: 114px;
+  top: 2735px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+.eve img {
+  margin-top: 20px;
+}
+
+h4 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.eve_p1 {
+  height: 12px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  line-height: 12px;
+}
+
+.eve_p2 {
+  width: 223px;
+  height: 96px;
+  margin: 0 auto;
+  padding: 12px 0;
+  text-align: justify;
+}
+
+.eve_h22 {
+  height: 64px;
+  width: 240px;
+  margin: 40px auto 20px;
+  line-height: 32px;
+}
+
+.eve_p3 {
+  margin: 8px auto 20px;
+}
+
+.eve_p4 {
+  width: 223px;
+  height: 96px;
+  margin: 12px auto;
+  text-align: justify;
+  line-height: 19.2px;
+}
+
+.kihon ul li {
+  line-height: 19.2px;
+  font-size: 12px;
+}
+
+.kihon ul {
+  width: 295px;
+  height: 192px;
+  margin: 40px auto 0;
+  text-align: justify;
+}
+
+.kihon ul li::before {
+  content: '';
+  /* contentプロパティがないと擬似要素が表示されません */
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #333333;
+  margin-right: 8px;
+  /* 四角形とテキストの間にマージンを追加 */
+}
+
+.kihon span::before {
+  content: '';
+  /* contentプロパティがないと擬似要素が表示されません */
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #333333;
+  margin-right: 8px;
+  /* 四角形とテキストの間にマージンを追加 */
+}
+
+footer>.innerWrap {
+  /* background-color: rgba(0, 122, 183, 0.2); */
+  background-color: #007AB7;
+}
+
+.flagOfTaiwan {
+  width: 32px;
+  height: 24px;
+  margin: 20px 171px;
+}
+
+footer p {
+  color: #fff;
+  padding: 12px 100px;
+
+}
+
+footer li {
+  padding-bottom: 4px;
+  border-bottom: 1px solid #fff;
+  line-height: 1.5;
+}
+
+.footerNav {
+  width: 195px;
+  height: 167px;
+  margin: 20px auto 40px;
+}
+
+.footerNav a {
+  color: #fff;
+  font-size: 12px;
+}
+
+.footerRogo {
+  width: 71px;
+  height: 28px;
+  float: left;
+  margin: 0 22px 0 20px;
+}
+
+.footRogos {
+  width: 150px;
+  margin-bottom: 22px;
+  display: flex;
+  justify-content: space-between;
+  /* float:left;
+  padding-bottom:22px; */
+}
+
+.foooterRogos img {
+  display: block;
+  margin: 20px;
+}
+
+.footerText {
+  text-align: center;
+  color: #fff;
+  border-top: 1px solid #6CBAD6;
+}
+
+.topへ戻る {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  right: -150px;
+  bottom: 0;
+}
+
+/* ベースCSS・リセットCSS */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+button {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border-radius: 0;
+}
+body {
+  overflow: hidden;
+} */
+/* .demo-title {
+  font-size: 24px;
+  margin-bottom: 1em;
+  padding: 1em 0;
+  text-align: center;
+  color: #fefefe;
+  background-color: #1f5491;
+} */
+/*********** ここまでベースCSS・リセットCSS ***********/
+.carousel {
+  width: 295px;
+  height: 467px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.carousel-area {
+  /* リスト数×リスト幅を計算してwidth指定してもいいが、汎用性を考慮してjQueryで計算代入する */
+  height: 100%;
+  position: absolute;
+  display: flex;
+}
+
+/* object-fitを使用せずに画像トリミングさせるためにbackgroundで指定 */
+.carousel-list {
+  width: 295px;
+  height: 467px;
+  margin-right: 80px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+  .carousel-list {
+    margin: 0 auto;
+    margin-right: 80px;
+  }
+
+  .s_h1 {
+    background-image: url(../images/syoukai4.png);
+    background-size: cover;
+  }
+
+  .s_h2 {
+    background-image: url(../images/syoukai5.png);
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel {
+    width: 300px;
+    height: calc(300px * 0.5625);
+  }
+
+  .carousel-list {
+    width: 295px;
+    height: 467px;
+    margin: 0 auto;
+    margin-right: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.carousel-list:nth-child(1) {
+  background-image: url(../images/sl1.png);
+}
+
+.carousel-list:nth-child(2) {
+  background-image: url(../images/sl2.png);
+}
+
+.carousel-list:nth-child(3) {
+  background-image: url(../images/sl3.png);
+}
+
+.carousel-list:nth-child(4) {
+  background-image: url(../images/sl4.png);
+}
+
+.carousel-list:nth-child(5) {
+  background-image: url(../images/sl5.png);
+}
+
+/* clipで非表示指定（スクリーンリーダー対策） */
+.carousel-img {
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+/*********** スライド送りボタン ***********/
+/* 共有パーツ */
+.arow-wrap {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow-btn {
+  width: 64px;
+  height: 64px;
+  background-color: #777575;
+  border-radius: 50%;
+  transition: .2s;
+}
+
+.arrow-btn:focus {
+  box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.8);
+}
+
+.arrow-btn:hover {
+  background-color: rgb(51, 79, 216);
+  box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.8);
+}
+
+/* 左 */
+.arrow-left {
+  position: absolute;
+  top: 507px;
+  left: -60px
+}
+
+.arrow-left:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #fefefe;
+  border-left: 2px solid #fefefe;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, -50%)rotate(-45deg);
+}
+
+/* 右 */
+.arrow-right {
+  position: absolute;
+  top: 507px;
+  right: -60px;
+}
+
+.arrow-right:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #fefefe;
+  border-left: 2px solid #fefefe;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-70%, -50%)rotate(135deg);
+}
+
+@media screen and (max-width: 768px) {
+  .arrow-btn {
+    width: 30px;
+    height: 30px;
+    display: none;
+  }
+
+  .arrow-right {
+    display: none;
+  }
+
+  .arrow-left {
+    display: none;
+  }
+
+  .pagination {
+    position: relative;
+    bottom: -320px;
+  }
+
+  .pagination-circle {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .littleLogo {
+    display: none;
+  }
+
+  #loading {
+    /*ローディングにかかる時間*/
+    transition: all 4s;
+    background-color: #007AB7;
+    z-index: 10000;
+    position: fixed;
+    /* top, right, bottom, left に対応する一括指定*/
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*主軸の方向や向き（通常または逆方向）を定義し
+    今回は積み重なるように配置する */
+    flex-direction: column;
+  }
+
+  .spin {
+    background-color: #007AB7;
+  }
+
+  .loaded {
+    /*要素の不透明度を設定します。 不透明度は要素の裏にある
+    コンテンツが隠れる度合いであり、透明度の逆*/
+    opacity: 0;
+    /*要素はあるけど見えない状態*/
+    visibility: hidden;
+  }
+}
+
+/*********** ページネーション ***********/
+.pagination {
+  margin: 5% auto 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.pagination-circle {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #333333;
+  border-radius: 50%;
+  background-color: #777575;
+}
+
+/* jsでtargetクラスがついたら背景色を変える */
+.pagination-circle.target {
+  background-color: #333333;
+}
+
+/* 画像のセレクタによって適用する場合（例: .slide-image） */
+.slide-image {
+  width: 295px;
+  height: 467px;
+  /* 他のスタイルがあればここに追加 */
+}
+
+@media screen and (min-width: 768px) {
+  .pagination {
+    margin: 60px auto 0;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .drawerNav {
+    visibility: collapse;
+  }
+
+  .drawerTextPc {
+    visibility: visible;
+  }
+
+  .drawerTextPc {
+    display: block;
+    width: 700px;
+    position: absolute;
+    top: 40px;
+    left: 560px;
+    border-bottom: none;
+  }
+
+  .globalMenu {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .drawerTextPc .globalMenu li a {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .drawerTextPc .globalMenu li a:hover {
+    text-decoration: underline;
+  }
+
+  .drawerBtn {
+    display: none;
+  }
+}
+
+/* ↓PCモード↓ */
+@media screen and (min-width: 769px) {
+  body {
+    width: 1366px;
+    font-size: 20px;
+  }
+
+  header {
+    width: 1366px;
+    height: 768px;
+    background-image: url(../images/hero3.png);
+    background-position: 80% 100%;
+  }
+
+  .b_logo {
+    width: 780px;
+    height: 314px;
+    position: relative;
+    left: 230px;
+    top: 180px;
+  }
+
+  .littleLogo {
+    width: 133px;
+    height: 54px;
+    position: absolute;
+    left: 83px;
+    top: 30px;
+  }
+
+  .i_con {
+    width: 38.9px;
+    height: 176px;
+    margin-left: 83px;
+  }
+
+  .i_con img {
+    width: 32px;
+    height: 32px;
+    margin: 20px;
+  }
+
+  .s_h1 {
+    width: 1366px;
+    height: 458px;
+    padding-top: 80px;
+    padding-left: 103px;
+    display: grid;
+    grid-template-rows: 78px 61px 159px;
+    grid-template-columns: 361px 144px 636px;
+  }
+
+  .flag {
+    width: 104px;
+    height: 78px;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    margin-top: 0;
+    margin-left: 148px;
+  }
+
+  h3,
+  .s_h1 p,
+  .border1,
+  .border2 {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+
+  h3 {
+    font-size: 48px;
+  }
+
+  .s_h1 p {
+    font-size: 32px;
+    margin-top: 100px;
+  }
+
+  .border1 {
+    width: 420px;
+    border-top: 1px solid #000000;
+    margin-top: 150px;
+  }
+
+  .border2,
+  .border3 {
+    width: 420px;
+  }
+
+  .Sho_kai1 {
+    width: 636px;
+    height: 298px;
+    grid-row: 1/4;
+    grid-column: 3/4;
+  }
+
+  .syo_kai img {
+    margin-top: 0;
+  }
+
+  .s_h2 {
+    width: 1366px;
+    height: 458px;
+    padding-top: 80px;
+    padding-left: 103px;
+    display: grid;
+    grid-template-rows: 298px;
+    grid-template-columns: 420px 104px 636px;
+  }
+
+  .s_h2 p {
+    font-size: 20px;
+    width: 420px;
+    height: 160px;
+    margin-top: 68px;
+    margin-bottom: 68px;
+    line-height: 1.6;
+  }
+
+  .border3,
+  .s_h2 p,
+  .border2 {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+
+  .border2 {
+    margin-top: 297px;
+  }
+
+  .Sho_kai2 {
+    width: 636px;
+    height: 298px;
+    grid-row: 1/2;
+    grid-column: 3/4;
+    margin-top: 0;
+  }
+
+  .gall {
+    margin-top: 100px;
+    padding-top: 20px;
+  }
+
+  h1 {
+    width: 530px;
+    height: 96px;
+    font-size: 48.24px;
+    padding-top: 24px;
+  }
+
+  h1 span {
+    font-size: 24.12px
+  }
+
+  .gall h1 {
+    margin-left: 103px;
+  }
+
+  .tra h1 {
+    margin-left: 800px;
+  }
+
+  .eve h1 {
+    margin-left: 103px;
+  }
+
+  .eve h2 {
+    font-size: 36px;
+    width: 468px;
+    height: 115.2px;
+    margin-left: 103px;
+    line-height: 1.6;
+    text-align: start;
+  }
+
+  .gall {
+    width: 1366px;
+    height: 947px;
+  }
+
+  .gall h1 {
+    margin-bottom: 160px;
+  }
+
+  .tra {
+    width: 1366px;
+    height: 1007px;
+    padding-top: 20px;
+  }
+
+  .map {
+    display: flex;
+  }
+
+  .map p {
+    font-size: 20px;
+    line-height: 1.6;
+    width: 420px;
+    height: 248px;
+    margin: 120px 110px 240px 163px;
+    padding-top: 60px;
+  }
+
+  .position img {
+    width: 225px;
+    height: 508px;
+    padding: 0;
+    margin-left: 220px;
+  }
+
+  .size {
+    position: relative;
+  }
+
+  .pei_rink {
+    width: 99px !important;
+    height: 209px;
+    left: 1230px;
+    top: -550px;
+  }
+
+  .tyu_rink {
+    width: 99px !important;
+    height: 209px;
+    left: 960px;
+    top: -520px
+  }
+
+  .nan_rink {
+    width: 99px !important;
+    height: 209px;
+    left: 1020px;
+    top: -220px
+  }
+
+  .border4 {
+    width: 480px;
+    margin-top: 80px;
+  }
+
+  .rantanFes,
+  .countDown {
+    margin-left: 103px;
+    margin-bottom: 80px;
+    display: grid;
+    grid-template-rows: 396px;
+    grid-template-columns: 580px 140px 440px;
+  }
+
+  .rantanFes img,
+  .countDown img {
+    width: 580px;
+    height: 396px;
+    margin: 0;
+  }
+
+  h4 {
+    font-size: 20px;
+    font-weight: bold;
+    grid-row: 1/2;
+    grid-column: 3/4;
+  }
+
+  .eve {
+    width: 1366px;
+    height: 1419.2px;
+    padding: 0;
+  }
+
+  .eve h1 {
+    margin-bottom: 120px;
+  }
+
+  .eve_p1,
+  .eve_p3 {
+    font-size: 20px;
+    grid-row: 1/2;
+    grid-column: 3/4;
+    margin-top: 64px;
+    text-align: end;
+  }
+
+  .eve_p2,
+  .eve_p4 {
+    font-size: 20px;
+    line-height: 1.6;
+    width: 314px;
+    height: 192px;
+    grid-row: 1/2;
+    grid-column: 3/4;
+    margin-top: 150px;
+  }
+
+  .border5,
+  .border6,
+  .border7,
+  .border8 {
+    grid-row: 1/2;
+    grid-column: 3/4;
+    width: 314px;
+  }
+
+  .border5,
+  .border7 {
+    margin-top: 120px;
+  }
+
+  .border6,
+  .border8 {
+    margin-top: 390px;
+  }
+
+  .kihon {
+    width: 1366px;
+    height: 720px;
+  }
+
+  .kihonContents {
+    width: 1040px;
+    height: 560px;
+    border: #000000 1px solid;
+    margin: 160px 163px;
+  }
+
+  .kihonContents h2 {
+    font-size: 40px;
+    margin-top: 40px;
+  }
+
+  .kihonArticle {
+    display: flex;
+  }
+
+  .kihonArticle ul {
+    width: 450px;
+    height: 320px;
+  }
+
+  .kihonArticle ul li,
+  .kihonArticle ul li span {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  .flagOfTaiwan {
+    width: 64px;
+    height: 48px;
+    margin: 20px 650px;
+  }
+
+  .footerNav {
+    width: 332px;
+    height: 292px;
+    margin-left: 103px;
+    margin-bottom: 20px;
+  }
+
+  .footerNav a {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  .footerSec {
+    display: grid;
+    grid-template-rows: 116px 292px;
+    grid-template-columns: 103px 332px 120px 270px 183px 103px;
+  }
+
+  .footerNav {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    margin: 0;
+    margin-top: 40px;
+  }
+
+  .footerRogo {
+    width: 256px;
+    height: 103px;
+    grid-row: 2/3;
+    grid-column: 4/5;
+    margin: 0;
+    margin-top: 180px;
+  }
+
+  .footRogos {
+    width: 183px;
+    height: 32px;
+    grid-row: 2/3;
+    grid-column: 6/7;
+    margin: 0;
+    margin-top: 240px;
+  }
+
+  .topへ戻る {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left: 600px;
+  }
+
+  #loading {
+    /*ローディングにかかる時間*/
+    transition: all 4s;
+    background-color: #007AB7;
+    z-index: 10000;
+    position: fixed;
+    /* top, right, bottom, left に対応する一括指定*/
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*主軸の方向や向き（通常または逆方向）を定義し
+  今回は積み重なるように配置する */
+    flex-direction: column;
+  }
+
+  .spin {
+    background-color: #007AB7;
+  }
+
+  .loaded {
+    /*要素の不透明度を設定します。 不透明度は要素の裏にある
+  コンテンツが隠れる度合いであり、透明度の逆*/
+    opacity: 0;
+    /*要素はあるけど見えない状態*/
+    visibility: hidden;
+  }
+}
