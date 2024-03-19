@@ -1,0 +1,187 @@
+★ドロワーメニューの実装
+
+必要なところだけコピペお願いします。
+
+・HTML　
+
+  <header>
+        <figure><img src="images/sp.hero.png" alt="台南のヒーロー画像" class="heroImg"></figure>
+        <img src="images/ヘッダーロゴタイプ.png" alt="rogo" class="rogoImg">
+        <img src="images/メインロゴ台南画像.png" alt="台南" class="tainanImg">
+        <ul class="snsIcon">
+            <li class="facebookImg"><img src="images/facebook.png" href="#"></li>
+            <li class="instaImg"><img src="images/insta.png"  href="#"></li>
+            <li Class='twitterImg'><img src="images/twitter.png" href="#"></li>
+        </ul>
+       <!-- ↓↓↓ ドロワーメニュ　↓↓↓-->
+        <img src="images/ドロワーアイコン画像.png" class="drawerBtn" id="DrawerBtn">
+        <nav class="drawerNav" id="nav">
+            <div class="drawerMenu">
+                <img src="images/ドロワーロゴ画像.png" class="drawerImg">
+                <!-- 仮画像はCSSに差し替える -->
+                <img src="images/ドロワー閉じる画像 .png" class="drawerBtnCrosed">
+            </div>
+            <ul class="drawerText">
+                <li class="menuNum1"><a href="#">Menu</a></li>
+                <li class="menuNum2"><a href="#">TOP</a></li>
+                <li class="menuNum3"><a href="#">台北</a></li>
+                <li class="menuNum4"><a href="#">台中</a></li>
+                <li class="menuNum5"><a href="#">台南</a></li>
+                <li class="menuNum6"><a href="#">当サイトのポリシー</a></li>
+                <li class="menuNum7"><a href="#">お問い合わせ</a></li>
+            </ul>
+        </nav>
+        <nav class="drawerTextPc">
+            <ul class="globalMenu">
+                <li><a href="#">TOP</a></li>
+                <li><a href="#">台北</a></li>
+                <li><a href="#">台中</a></li>
+                <li><a href="#">台南</a></li>
+                <li><a href="#">当サイトのポリシー</a></li>
+                <li><a href="#">お問い合わせ</a></li>
+            </ul>
+        </nav>
+
+        <p class="headerText">省略 </p>
+    </header>
+
+・CSS <スマホ>
+
+.drawerBtn{
+    position: absolute;
+    top:8px;
+    right:8px;
+}
+/*PC版のメニューの表示とブロック要素を消すプロパティで表示崩れを防止 */
+.drawerTextPc{
+    visibility: collapse;
+}
+/*   ↓↓↓ドロワーメニュー　↓↓↓　*/
+.drawerNav{
+    height:100%;
+    width: 260px;
+    background-color:#000;
+    color: #fff;
+    display:block;
+}
+.drawerBtnCrosed img{
+    padding: 10px 10px 0 0;
+    object-fit:cover;
+}
+.drawerMenu{
+    width:260px;
+    display: flex;
+    justify-content:space-between;
+}
+.drawerText{
+    text-align:center;
+    font-size: 24px;
+}
+.drawerText li{
+    padding-bottom: 28px;
+}
+.menuNum1{
+    font-size:30px;
+    margin: 32px auto 32px auto;
+}
+.menuNum2{
+    padding-bottom:40px;
+}
+.menuNum3 a,
+.menuNum4 a,
+.menuNum5 a,
+.menuNum6 a,
+.menuNum7 a{
+    border-bottom: 1px solid #fff;
+}
+#nav
+{
+    position: fixed;
+    right: -270px;
+    top: 0;
+    height:100%;
+    width:260px;
+    z-index:999;
+}
+#nav.show {
+    transform: translate3d(-270px, 0, 0);
+}
+/* ドロワー開閉アニメーションスピード */
+#wrapper, #nav {
+    transition: transform 0.3s;
+}
+/* ドロワーメニュー*/
+.drawerNav{
+    height:80vh;
+    width: 260px;
+    background-color:#000;
+    color: #fff;
+}
+.drawerBtnCrosed{
+    margin: 10px 10px 0 0;
+}
+.drawerMenu{
+    display: flex;
+    justify-content: space-between;
+}
+.drawerText{
+    text-align:center;
+    font-size: 24px;
+}
+.drawerText li{
+    padding-bottom: 28px;
+}
+.menuNum1{
+    font-size:30px;
+    margin: 32px auto 32px auto;
+}
+.menuNum2{
+    padding-bottom:40px;
+}
+.menuNum3 a,
+.menuNum4 a,
+.menuNum5 a,
+.menuNum6 a,
+.menuNum7 a{
+    border-bottom: 1px solid #fff;
+}
+#nav {
+    position: fixed;
+    right: -270px;
+    top: 0;
+} 
+.drawerBtnCrosed{
+    float:right;
+}
+#wrapper, #nav {
+    transition: transform 0.3s;
+}
+
+・CSS <PC>
+
+/* PC版でドロワーメニューを消して、グローバルメニューを表示させる */
+  .drawerNav{
+        visibility: collapse;
+    }
+    .drawerTextPc{
+        visibility:visible;
+    }
+
+<JavaScript>
+
+$(document).ready(function(){
+    let drawerBtn = $('#DrawerBtn');
+    let drawerBtnCrosed = $('.drawerBtnCrosed');
+    let nav = $('#nav');
+    let wrapper = $('#wrapper');
+
+    drawerBtn.click(function(){
+        wrapper.toggleClass('show');
+        nav.toggleClass('show');
+    });
+
+    drawerBtnCrosed.click(function(){
+        wrapper.removeClass('show');
+        nav.removeClass('show');
+    });
+})

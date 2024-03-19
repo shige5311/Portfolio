@@ -1,0 +1,1012 @@
+@charset "utf-8";
+
+/* モバイル版やること
+・全体のバランス調整
+テキストの左寄せ⇒textalign:center;を見出しだけに変える
+・モーダルの作成
+ */
+
+/* 共通ルール
+padding:4の倍数
+PCのコンテンツ幅:1200px
+font:Zen kaku Gothic New
+
+font-size:SP12px,PC20px もしくは４の倍数
+見出しのfont-size:SP24pxor12px,PC48pxor24px
+SP幅:375px,PC幅:1366px
+■盛り込む内容の注意点■		JavaScript
+・ページを表示したり遷移したりする際に、ローディング画面を挟む			
+・モーダルウィンドウの実装			
+・ドロワーメニューの実装			
+・ギャラリーコンテンツのスライダー（カルーセル）の実装			
+*/
+
+
+/* スマートフォン向けスタイル */
+/* 全体 */
+*{
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    box-sizing:border-box;
+}
+body{
+    width:100%;
+    margin: 0 auto;
+}
+/* ローディングアニメーション */
+/* 最初は見えない状態からスタート */
+  .spin {
+    background-color: #007AB7;
+    max-width: 100%;
+    height: auto;
+    display: none;
+  }
+  #loading {
+    /*ローディングにかかる時間*/
+    transition: all 4s; 
+    background-color: #007AB7;
+    z-index: 10000;
+    position: fixed;
+    inset: 0; /* top, right, bottom, left に対応する一括指定*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  /* ローディング画面が消えるときの処理 */
+  .loaded {
+    opacity: 0;
+    visibility: hidden;
+  }
+  /* PC版とスマホ版の表記を変える⇒JavaScriptで変えてよいところ */
+  .Textchange::before{
+    content:"Top＞";
+  }
+/* ヘッダーエリア */
+header{
+    height: 667px;
+}
+.heroImg{
+    width: 100%;
+    height:100%;
+}
+.rogoImg{
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+.tainanImg{
+    position:absolute;
+    top:120px;
+    left:84px;
+}
+.headerText{
+    font-size:12px;
+    color: #fff;
+    position:absolute;
+    top:600px;
+    right:12px;
+}
+.snsIcon{
+    position:absolute;
+    top:460px;
+    left:16px;
+    height:160px;
+}
+.snsIcon li{
+    padding-bottom: 8px;
+}
+/* ロゴを左に寄せたい!!!!!
+.facebook{
+    float: left;
+    width: 8px;
+} */
+.drawerTextPc{
+    visibility: collapse;
+}
+/* ドロワーメニュー*/
+.drawerBtn{
+    position: absolute;
+    top:8px;
+    right:8px;
+}
+.drawerNav{
+    height:100%;
+    width: 260px;
+    background-color:#000;
+    color: #fff;
+    display:block;
+}
+.drawerBtnCrosed img{
+    padding: 10px 10px 0 0;
+    object-fit:cover;
+}
+.drawerMenu{
+    width:260px;
+    display: flex;
+    justify-content:space-between;
+}
+.drawerText{
+    text-align:center;
+    font-size: 24px;
+}
+.drawerText li{
+    padding-bottom: 28px;
+}
+.menuNum1{
+    font-size:30px;
+    margin: 32px auto 32px auto;
+}
+.menuNum2{
+    padding-bottom:40px;
+}
+.menuNum3 a,
+.menuNum4 a,
+.menuNum5 a,
+.menuNum6 a,
+.menuNum7 a{
+    border-bottom: 1px solid #fff;
+}
+#nav{
+    position: fixed;
+    right: -270px;
+    top: 0;
+    height:100%;
+    width:260px;
+    z-index:999;
+}
+#nav.show {
+    transform: translate3d(-270px, 0, 0);
+}
+/* ドロワー開閉アニメーションスピード */
+#wrapper, #nav {
+    transition: transform 0.3s;
+}
+ /* パンくずナビゲーション */
+ .breadCrumb{
+    display:flex;
+}
+/* メインエリア */
+main{
+    background-color:#fff;
+    text-align: center;
+    height:4550px;
+}
+.innerRap{
+    height:4550px;
+}
+nav{
+    border-bottom: 1px solid #000;
+    padding-bottom: 4px;
+    margin-bottom:20px;
+}
+.subImg{
+    width: 294px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto 20px auto;
+}
+.borderLine{
+    border-bottom: 1px solid #000;
+    width:200px;
+    margin: 8px auto 8px auto;
+    padding: 32px auto;
+}
+.attraction > .borderLine{
+    margin-top:60px;
+}
+.gourmetAreaBorder{
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    width:200px;
+    margin: 48px auto 48px auto;
+}
+.gourmetAreaBorder p{
+    font-size:12px;
+    text-align:left;
+    padding: 8px 0 8px 0;
+}
+main .innerRap{
+    background-color:#f4f4f4;
+}
+main>p{
+    text-align: center;
+}
+.titleText{
+    width:200px;
+    margin-top:60px;
+    margin-left:88px;
+    height:36px;
+    font-size:24px;
+    background: url('../images/hedding.png') no-repeat center/cover;
+}
+.titleText p {
+    font-size: 12px;
+    line-height: 1.5;
+}
+h2{
+    font-family: bold;
+    font-size: 24px;
+}
+.attraction h2{
+    margin: 60px auto 20px auto;
+}
+/* .heddingText{
+
+} */
+.gridItem1 {
+    width: 295px;
+    height: 221px;
+}
+
+
+h2 span{
+    font-size: 12px;
+    padding-left:4px;
+}
+.textBlue{
+    width: 294px;
+    font-size: 12px;
+    /* background-color:#63c99b; */
+    background-color: rgba(108, 186, 216, 0.2);
+    margin: 12px auto 12px auto;
+    text-align: left;
+    padding: 12px 32px 12px 32px;
+}
+.gourmetScene > .borderLine{
+    margin-top:32px;
+}
+/* .gourmetText{
+    position:relative;} */
+.gridItem3{
+    display:flex;
+    justify-content:space-evenly;
+    width:100%;
+}
+.gridItem3 img{
+    width:140px;
+    height:150px;
+}
+.gridItem5{
+    width:296px;
+    height:220px;
+}
+.gridItem7 img{
+    width:140px;
+    height:150px;
+}
+.adjustmentImg1{
+    width:336px;
+    height:130px;
+}
+/* モーダル */
+/* モーダル画像1 */
+/* モーダル開かれた際の背景状態 
+気になる場合背景色変更等*/
+.adjustmentArea{
+    height:30px;
+}
+.businessModal{
+    padding-left:200px;
+}
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(1,128,190,0.9);
+}
+/* モーダル本体に対してのCSS */
+  #modal .modal-content {
+    background-color: #fff;
+    margin: 30vh auto;
+    width: 100%;
+    max-width: 100%;
+    height: 375px;
+  }
+  /* JS用(要約：押されたらモーダル開く) */
+  #modal.is-hidden {
+    display: none;
+  }
+  /* JS用(要約：押されたらモーダル閉じる) */
+  #modal.is-shown {
+    display: block;
+  }
+  /* ドロワーメニュー参照 */
+  #modal .close {
+    color: black;
+    float: right;
+    font-size: 100%;
+    font-weight: bold;
+  }
+  /* ドロワーメニュー参照 */
+  #modal .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+/* モーダル2 */
+#modal1 {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(1,128,190,0.9);
+}
+/* モーダル本体に対してのCSS */
+  #modal1 .modal-content {
+    background-color: #fff;
+    margin: 30vh auto;
+    width: 100%;
+    max-width: 100%;
+    height: 375px;
+  }
+  /* JS用(要約：押されたらモーダル開く) */
+  #modal1.is-hidden {
+    display: none;
+  }
+  /* JS用(要約：押されたらモーダル閉じる) */
+  #modal1.is-shown {
+    display: block;
+  }
+  /* ドロワーメニュー参照 */
+  #modal1 .close {
+    color: black;
+    float: right;
+    font-size: 100%;
+    font-weight: bold;
+  }
+  /* ドロワーメニュー参照 */
+  #modal1 .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+    /* モーダル3 */
+    #modal2 {
+        display: none;
+        position: fixed;
+        z-index: 2;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(1,128,190,0.9);
+    }
+    /* モーダル本体に対してのCSS */
+      #modal2  .modal-content {
+        background-color: #fff;
+        margin: 30vh auto;
+        width: 100%;
+        max-width: 100%;
+        height: 375px;
+      }
+      /* JS用(要約：押されたらモーダル開く) */
+      #modal2.is-hidden {
+        display: none;
+      }
+      /* JS用(要約：押されたらモーダル閉じる) */
+      #modal2.is-shown {
+        display: block;
+      }
+      /* ドロワーメニュー参照 */
+      #modal2 .close {
+        color: black;
+        float: right;
+        font-size: 100%;
+        font-weight: bold;
+      }
+      /* ドロワーメニュー参照 */
+      #modal2 .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    /* モーダル4 */
+  #modal3 {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(1,128,190,0.9);
+}
+/* モーダル本体に対してのCSS */
+  #modal3 .modal-content {
+    background-color: #fff;
+    margin: 30vh auto;
+    width: 90%;
+    max-width: 100%;
+    height: 375px;
+  }
+  /* JS用(要約：押されたらモーダル開く) */
+  #modal3.is-hidden {
+    display: none;
+  }
+  /* JS用(要約：押されたらモーダル閉じる) */
+  #modal3.is-shown {
+    display: block;
+  }
+  /* ドロワーメニュー参照 */
+  #modal3 .close {
+    color: black;
+    float: right;
+    font-size: 100%;
+    font-weight: bold;
+  }
+  /* ドロワーメニュー参照 */
+  #modal3 .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  * 以下モーダルの共通項目のCSS */
+.モーダルタイトル{
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    width: 192px;
+    text-align: center;
+    margin: 36px 71.5px 40px;
+}
+.モーダル1 {
+    text-align: start;
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.6;
+}
+.モーダル画像{
+    margin: 40px;
+    width: 283px;
+    height: 283px;
+}
+.スマホ {
+    width: 28px;
+    height: 28px;
+  }
+
+/* モーダルここまで */
+
+
+.danziNoodles h2{
+    width:100px;
+    margin: 60px auto 0 auto;
+}
+.gourmetScene h3{
+    margin-bottom: 4px; 
+}
+.danziNoodles,
+.shrimpRice,
+.xiaoLongBao,
+.duckMeatRice{
+    margin-bottom:44px;
+}
+.danziNoodles p,
+.shrimpRice p,
+.xiaoLongBao p,
+.duckMeatRice p{
+    margin-top:8px;
+    height:60px;
+}
+.pickupContents h2{
+    margin: 0 auto;
+}
+.pickupContents h2{
+    margin-top:60px;
+}
+.pickupContents p{
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.topBtn{
+    width: 48px;
+    height: 48px;
+    position: relative;
+    right: -150px;
+    bottom: 0;
+}
+.borderLineEnd{
+    border-top: 1px solid #000;
+    width:200px;
+    margin: 160px auto 0px auto;
+    padding-bottom: 40px
+}
+.gridItem9{
+    width:224px;
+    height:132px;
+}
+.gridItem11,
+.gridItem12{
+    width:156px;
+    height:80px;
+}
+.gridItem14,
+.gridItem15{
+    width:176px;
+    height:120px;
+}
+.gridItem15{
+    margin-right:auto;
+    margin-left:auto;
+}
+/* フッターエリア */
+footer >.innerWrap {
+    /* background-color: rgba(0, 122, 183, 0.2); */
+    background-color: #007AB7;
+}
+.flagOfTaiwan {
+    width: 32px;
+    height: 24px;
+    margin: 20px 171px;
+}
+footer p{
+    color:#fff;
+    padding: 12px 100px;
+
+}
+footer li{
+    padding-bottom:4px;
+    border-bottom: 1px solid #fff;
+    line-height: 1.5;
+}
+.footerNav{
+    width:195px;
+    height: 167px;
+    margin: 20px auto 40px;
+}
+.footerNav a{
+    color:#fff;
+    font-size:12px;
+}
+.footerRogo{
+    width: 71px;
+    height:28px;
+    float: left;
+    margin: 0 22px 0 20px;
+} 
+.footRogos{
+    width:150px;
+    margin-bottom: 22px;
+    display:flex;
+    justify-content:space-between;
+    /* float:left;
+    padding-bottom:22px; */
+}
+.foooterRogos img{
+    display:block;
+    margin:20px;
+}
+.footerText{
+    text-align:center;
+    color:#fff;
+    border-top: 1px solid #6CBAD6;
+}
+/* background-color: rgba(0, 122, 183, 0.2); */
+/* モーダル画像のついか予定 */
+
+
+/* パソコン向けスタイル */
+@media (min-width: 768px) {
+    body{
+        line-height: 1.5;
+    }
+    header{
+        height:600px;
+    }
+    .heroImg{
+        background-image:url(../images/pc.hero.png); 
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+    .drawerBtn{
+        display:none;
+    }
+    /* PC版でドロワーメニューを消滅させて、グローバルメニューを表示させる */
+    .drawerNav{
+        visibility: collapse;
+    }
+    .drawerTextPc{
+        visibility:visible;
+    }
+   .drawerTextPc{
+    display:block;
+    width: 700px;
+    position:absolute;
+    top:40px;
+    left:560px;
+    border-bottom: none;
+   }
+   .globalMenu{
+    display:flex;
+    justify-content:space-between;
+   }
+   .drawerTextPc .globalMenu li a {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    }
+    .drawerTextPc .globalMenu li a:hover {  
+    text-decoration: underline;
+    }
+    /* ヘッダーの各種要素の位置調整 */
+    .tainanImg{
+        position:absolute;
+        top:100px;
+        left:360px;
+    }
+    .rogoImg{
+        position:absolute;
+        top:12px;
+        left:50px;
+    }
+    .snsIcon{
+        position:absolute;
+        top:360px;
+        left:52px;
+        height:160px;
+    }
+    .snsIcon li{
+        padding-bottom: 8px;
+    }
+    .drawerImg,
+    .drawerBtnCrosed{
+        display:none;
+    }
+    .headerText{
+        font-size:16px;
+        position:absolute;
+        top:460px;
+        left:900px;
+    }
+    /* スマホ版とPC版の表記を差し替える */
+    /* JavaScriptでさしかえるのもあり?
+     */
+    .Textchange:before{
+        content:"Home＞";
+    }
+    /* メインコンテンツ */
+    .attraction,
+    .gourmetContents,
+    .pickupContents{
+        width:1200px;
+        margin: 0 auto;
+    }
+    .textBlue{
+        font-size:20px;
+    }
+    .businessModal{
+        padding-top:40px;
+    }
+    .danziNoodles > .borderLine{
+        margin-top:60px;
+    }
+    /* } 高さ指定 */
+    h2{
+        width:180px;
+        font-size:36px;
+    }
+    .attraction h2{
+        margin-left:60px;
+    }
+    .titleText h2{
+        text-align:left;
+    }
+    /*attractionエリア */
+    .gridArea1{
+        display:grid;
+        grid-template-rows: 320px 168px;
+        grid-template-columns: 52% 48%;
+        justify-items:center;
+        align-items:center;
+        gap:20px;
+    }
+    [class^="gridItem"] {
+        gap:20%;
+        width:auto;
+    }
+    .gridItem1{
+        grid-row:1/2;
+        grid-column:1/2;
+        width:600px;
+        height: 300px;
+        object-fit: cover;
+    }
+    .gridItem2{
+        grid-row:1/2;
+        grid-column:2/3;
+        width:500px;
+        height:300px;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+    }
+    .gridItem3{
+        grid-row:2/3;
+        grid-column:1/2;
+        width:600px;
+    }
+    .gridItem3 img{
+        width:290px;
+        height:168px;
+        object-fit:cover;
+    }
+    .gridItem4{
+        grid-row:2/3;
+        grid-column:2/3;
+        width:500px;
+        height:168px;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+    }
+    .borderLine{
+        margin:20px auto;
+    }
+    .gridArea2{
+        display:grid;
+        grid-template-rows: 320px 168px;
+        grid-template-columns: 52% 48%;
+        justify-items:center;
+        align-items:center;
+        gap:20px;
+    }
+    .gridItem5{
+        grid-row:1/2;
+        grid-column:1/2;
+        width:600px;
+        height:330px
+    }
+    .gridItem6{
+        grid-row:1/2;
+        grid-column:2/3;
+        width: 480px;
+        height:330px;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+    }
+    .gridItem7{
+        grid-row:2/3;
+        grid-column:1/2;
+        width:600px;
+    }
+    .gridItem7 img{
+        width:290px;
+        height:168px;
+        object-fit:cover;
+    }
+    .gridItem8{
+        grid-row:2/3;
+        grid-column:2/3;
+        width: 480px;
+        height:168px;
+        text-align:center;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+    }
+    /*　グルメエリア */
+    .gourmetContents >.titleText{
+        margin-left:1000px;
+    }
+    .gourmetAreaBorder{
+        margin-left:20px;
+        padding: 40px auto; /*padding効かないのは？  */
+        
+    }
+    .gourmetAreaBorder p{
+        font-size:20px;
+        
+    }
+       /* ↓モーダル↓ */
+       .modalSubPhoto {
+        width: 675px;
+        height: 675px;
+       }
+       .スマホ {
+        width: 36px;
+        height: 36px;
+       }
+       #modal,
+       #modal1,
+       #modal2,
+       #modal3 {
+           width: 1366px;
+       }
+       #modal .modal-content,
+       #modal1 .modal-content,
+       #modal2 .modal-content,
+       #modal3 .modal-content
+        {
+           width: 675px;
+           height: 675px;
+           margin-right: 233px;
+           margin-left: 233px;
+         }   
+       .モーダル画像 {
+           width: 555px;
+           height: 555px;
+           margin-left: 60px;
+       }
+    .gourmetScene{
+        display:flex;
+        flex-wrap: wrap;
+    }
+
+    /* モーダル画像が引っ張られる */
+/*     .gourmetContents img{
+        width: 500px;
+        height: 220px;
+        object-fit: cover;
+    } */
+    .danziNoodles h2{
+        width:180px;
+    }
+    .danziNoodles,
+    .shrimpRice,
+    .xiaoLongBao,
+    .duckMeatRice{
+        width:50%;
+        margin: 0 auto;
+    }
+    .gourmetScene h2{
+        margin: 0 auto;
+    }
+    .floatClear{
+        clear:right;
+    }
+    .pickupContents > .titleText {
+        margin-left: 160px;
+    }
+    .pickupText{
+        margin-left: 20px;
+        width:500px;
+    }
+    .gridArea3{
+        display:grid;
+        grid-template-rows: 340px 220px 160px 330px;
+        grid-template-columns:58% 42%;
+        justify-items:center;
+        align-items:center;
+    } 
+    .gridItem9{
+        grid-row:1/2;
+        grid-column:1/2;
+        width:600x;
+        height:320px;
+    }
+    .gridItems9 img{
+        width:  580px;
+        height: 300px;
+        object-fit:cover;
+    }
+     .gridItem10{
+        grid-row:1/2;
+        grid-column:2/3;
+        width:  300px;
+        height: 192px;
+        display:block;
+    }
+    .gridItem11{
+        grid-row:2/3;
+        grid-column:1/2;
+        width:500px;
+        height:210px;
+    }
+    .gridItem12{
+        grid-row:2/3;
+        grid-column:2/3;
+        width: 500px;
+        height: 210px;
+        margin-right:0;
+    }
+    .gridItem13{
+        grid-row:3/4;
+        grid-column:1/2;
+        display:block;
+        width:900px;
+        text-align: right;
+    }
+    .gridItem14{
+        grid-row:4/5;
+        grid-column:1/2;
+        width: 600px;
+        height: 325px;
+    }
+    .gridItem15{
+        grid-row:4/5;
+        grid-column:2/3;
+        width:420px;
+        height:330px;
+    }
+    .gridItem15 img{
+        width:420px;
+        height:210px;
+    }
+    .gridEmpty{
+        width:0%;
+        grid-row:3/4;
+        grid-column:2/3;
+
+    }
+    .topBtn{
+        width: 48px;
+        height: 48px;
+        position: relative;
+        left: 650px;
+        bottom: 0;
+    }
+    .borderLineEnd{
+        width:500px;
+        padding-left:100px;
+    }
+    .lotusImg{
+        display:block;
+        background-image:url(../images/sp.lotus.png);
+        height:100px;
+        width:200px ;
+    }
+    /* フッター */
+    .flagOfTaiwan {
+        width: 64px;
+        height: 48px;
+        margin:20px 650px;
+    }
+    .footerNav {
+        width: 332px;
+        height: 292px;
+        margin-left: 103px;
+        margin-bottom: 20px;
+    }
+    .footerNav a {
+        font-size: 20px;
+        line-height: 1.6;
+    }
+    .footerSec {
+        display: grid;
+        grid-template-rows: 116px 292px;
+        grid-template-columns: 103px 332px 120px 270px 183px 103px;
+    }
+    .footerNav {
+        grid-row: 2/3;
+        grid-column: 2/3;
+        margin: 0;
+        margin-top: 40px;
+    }
+    .footerRogo {
+        width: 256px;
+        height: 103px;
+        grid-row: 2/3;
+        grid-column: 4/5;
+        margin: 0;
+        margin-top: 180px;
+    }
+    .footRogos {
+        width: 183px;
+        height: 32px;
+        grid-row: 2/3;
+        grid-column: 6/7;
+        margin: 0;
+        margin-top: 240px;
+    }
+    .footerRogo{
+        display:block;
+    }
+}
+    
