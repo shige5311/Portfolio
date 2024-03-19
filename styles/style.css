@@ -1,0 +1,422 @@
+@charset "UTF-8";
+
+/*********** 全体のスタイル ***********/
+body {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  line-height: 1.6;
+}
+img{
+  width: 100%;
+}
+
+/*********** PC ***********/
+@media screen and (min-width: 768px) {
+
+  /* ヘッダーのスタイル */
+  header {
+    background-color: #003366;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 36px;
+  }
+
+  header nav {
+    margin-top: 20px;
+  }
+
+  header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  header li {
+    margin: 0 20px;
+    font-size: 18px;
+  }
+
+  header a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+
+  #drawer-menu {
+    display: none;
+    /* PCでは非表示 */
+  }
+
+
+  /* おみくじボタンのスタイル */
+  #omikuji-btn {
+    background-color: #ffd700;
+    color: #003366;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  #omikuji-btn:hover {
+    background-color: #003366;
+    color: #fff;
+  }
+
+  /* おみくじのスタイル */
+  #omikuji-result {
+    display: none;
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+
+  #omikuji-result h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  #omikuji-result p {
+    font-size: 16px;
+  }
+
+  /* マウスオーバー時のリンクの下線 */
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* アニメーションのためのスタイル */
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* モーダル開かれた際の背景状態 */
+  #modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(1, 128, 190, 0.9);
+  }
+
+  /* モーダル本体に対してのCSS */
+  #modal .modal-content {
+    background-color: rgba(1, 128, 190, 0.9);
+    margin: 30vh auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* JS用(要約：押されたらモーダル開く) */
+  #modal.is-hidden {
+    display: none;
+  }
+
+  /* JS用(要約：押されたらモーダル閉じる) */
+  #modal.is-shown {
+    display: block;
+  }
+
+  /* ドロワーメニュー参照 */
+  #modal .close {
+    color: black;
+    float: right;
+    font-size: 100%;
+    font-weight: bold;
+  }
+
+  /* ドロワーメニュー参照 */
+  #modal .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .閉 {
+    max-width: 36px;
+    min-height: 36px;
+  }
+
+  .モーダルコンテンツ1 {
+    display: flex;
+  }
+
+  .モーダルコンテンツ {
+    margin-left: 520px;
+  }
+
+  .モーダルタイトル {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 103px;
+    margin-bottom: 20px;
+  }
+
+  .モーダル1 {
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    margin: 20px auto 40px;
+  }
+
+  .モーダル説明 {
+    color: #fff;
+    font-weight: bold;
+    line-height: 19px;
+  }
+
+  .モーダル説明1 {
+    color: #fff;
+    font-weight: bold;
+    line-height: 19px;
+  }
+
+  .モーダル画像 {
+    max-width: 600px;
+    margin-left: 103px;
+  }
+
+  .モーダル dl {
+    margin-bottom: 40px;
+  }
+
+  /* フッターのスタイル */
+  .pc-footer {
+    background-color: #333;
+    /* 適切な色を指定 */
+    color: #fff;
+    /* 適切な文字色を指定 */
+    padding: 20px;
+    text-align: center;
+  }
+
+  .pc-footer nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  .pc-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .pc-footer li {
+    display: inline-block;
+    margin-right: 15px;
+  }
+
+  .pc-footer a {
+    text-decoration: none;
+    color: #fff;
+    /* 適切なリンク色を指定 */
+    font-weight: bold;
+  }
+
+  .pc-footer a:hover {
+    text-decoration: underline;
+  }
+
+  #loading {
+    /*ローディングにかかる時間*/
+    transition: all 4s;
+    background-color: #007AB7;
+    z-index: 10000;
+    position: fixed;
+    /* top, right, bottom, left に対応する一括指定*/
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*主軸の方向や向き（通常または逆方向）を定義し
+    今回は積み重なるように配置する */
+    flex-direction: column;
+  }
+
+  .spin {
+    background-color: #007AB7;
+  }
+
+  .loaded {
+    /*要素の不透明度を設定します。 不透明度は要素の裏にある
+    コンテンツが隠れる度合いであり、透明度の逆*/
+    opacity: 0;
+    /*要素はあるけど見えない状態*/
+    visibility: hidden;
+  }
+}
+
+/*********** スマホ ***********/
+@media screen and (max-width: 768px) {
+
+  /* ヘッダーのスタイル */
+  header {
+    background-color: #003366;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 36px;
+  }
+
+  header nav {
+    margin-top: 20px;
+  }
+
+  header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  header li {
+    margin: 0 20px;
+    font-size: 18px;
+  }
+
+  header a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+
+  #drawer-menu {
+    display: block;
+    /* スマートフォンでは表示 */
+    position: fixed;
+    top: 0;
+    left: -100%;
+    /* 初期状態では非表示 */
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    padding-top: 50px;
+    text-align: center;
+    transition: left 0.3s ease-in-out;
+  }
+
+  #drawer-menu a {
+    font-size: 1.5em;
+  }
+
+  /* ドロワーメニューを閉じるボタンのスタイル - スマートフォン用 */
+  .close-btn {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+
+  #omikuji-btn {
+    background-color: #ffd700;
+    color: #003366;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  #omikuji-btn:hover {
+    background-color: #003366;
+    color: #fff;
+  }
+
+  #omikuji-result {
+    display: none;
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+
+  #omikuji-result h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  #omikuji-result p {
+    font-size: 16px;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+
+  }
+
+  /* フッターのスタイル */
+  .pc-footer {
+    background-color: #333;
+    /* 適切な色を指定 */
+    color: #fff;
+    /* 適切な文字色を指定 */
+    padding: 20px;
+    text-align: center;
+  }
+
+  .pc-footer nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  .pc-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .pc-footer li {
+    display: inline-block;
+    margin-right: 15px;
+  }
+
+  .pc-footer a {
+    text-decoration: none;
+    color: #fff;
+    /* 適切なリンク色を指定 */
+    font-weight: bold;
+  }
+
+  .pc-footer a:hover {
+    text-decoration: underline;
+  }
+}

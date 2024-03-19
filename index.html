@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="common/resetcss.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <!-- ローディングアニメーション -->
+    <div id="loading">
+        <img class="spin" src="" alt="spin">
+    </div>
+
+    <!-- おみくじアニメーション -->
+    <section id="omikuji">
+        <h2>おみくじ</h2>
+        <button id="omikuji-btn">おみくじを引く</button>
+        <div id="omikuji-result"></div>
+    </section>
+
+    <header>
+        <h1>ポートフォリオ</h1>
+        <!-- ドロワーメニューのボタン -->
+        <div class="menu-btn">&#9776;</div>
+        <nav id="drawer-menu">
+            <!-- ドロワーメニューの中身 -->
+            <ul>
+                <li><a href="#about">自己紹介</a></li>
+                <li><a href="#experience">経歴/学歴</a></li>
+                <li><a href="#projects">プロジェクト</a></li>
+                <li><a href="#skills">スキル</a></li>
+                <li><a href="port1/index.html">ポートフォリオ1</a></li>
+                <li><a href="port2/index.html">ポートフォリオ2</a></li>
+                <li><a href="port3/index.html">ポートフォリオ3</a></li>
+            </ul>
+            <!-- ドロワーメニューを閉じるボタン -->
+            <div class="close-btn">&times;</div>
+        </nav>
+    </header>
+
+    <!-- ドロワーメニューアイコン（PC版では非表示） -->
+    <div class="menu-btn">
+        <span class="menu-btn__burger"></span>
+    </div>
+
+    <!-- ドロワーメニュー（PC版では非表示） -->
+    <div id="drawer-menu">
+        <span class="close-btn">&times;</span>
+        <ul>
+            <li><a href="#about">自己紹介</a></li>
+            <li><a href="#experience">経歴/学歴</a></li>
+            <li><a href="#projects">プロジェクト</a></li>
+            <li><a href="#skills">スキル</a></li>
+            <li><a href="port1/index.html">ポートフォリオ1</a></li>
+            <li><a href="port2/index.html">ポートフォリオ2</a></li>
+            <li><a href="port3/index.html">ポートフォリオ3</a></li>
+        </ul>
+    </div>
+
+    <section id="about">
+        <a href="port1/index.html">ポートフォリオ1</a>
+        <a href="port2/index.html">ポートフォリオ2</a>
+        <h2>自己紹介</h2>
+        <img src="images/jikosyoukai.png" alt="">
+        <p>自己紹介の文章をここに記載します。自身の経歴、専門性、情熱、目標などを簡潔にまとめましょう。</p>
+    </section>
+
+    <!-- ... 以下、各セクションの内容 ... -->
+
+    <!-- 各セクションの内容 -->
+    <section id="about">
+        <h2>自己紹介</h2>
+        <p>私は〇〇と申します。〇〇での経験を積み、〇〇などに従事してきました。〇〇などを学び、〇〇などに携わりました。</p>
+    </section>
+
+    <section id="experience">
+        <h2>経歴/学歴</h2>
+        <p>これまでの経歴や学歴について説明します。〇〇での業務や〇〇などの学歴について触れます。</p>
+    </section>
+
+    <section id="projects">
+        <h2>プロジェクト</h2>
+        <p>私が関わったプロジェクトについて紹介します。〇〇プロジェクトでは〇〇を担当し、〇〇プロジェクトでは〇〇などに携わりました。</p>
+    </section>
+
+    <section id="skills">
+        <h2>スキル</h2>
+        <p>私が持つスキルについて紹介します。〇〇などのスキルや、〇〇などの経験を通じて得たスキルについて述べます。</p>
+    </section>
+
+    <section id="future">
+        <h2>将来の方向性</h2>
+        <p>将来の方向性や目標について語ります。〇〇などに挑戦し、〇〇などを学びながらキャリアを積んでいきたいと考えています。</p>
+    </section>
+
+    <section id="sns">
+        <h2>SNS</h2>
+        <p>私のSNSアカウントやプロフィールなどについて案内します。気軽に連絡やフォローしていただければ嬉しいです。</p>
+    </section>
+
+    <!-- 以下モーダルの内容 -->
+    <div class="PC1">
+        <div class="夜一ボタン">
+            <!-- モーダルを開く為の条件設定 -->
+            <button onclick="openModal()">
+                <!-- 開く条件先を指定 -->
+                <a href="#"><img class="スマホ" src="あとで入れる"></a>
+                <a href="#"><img class="PC" src="あとで入れる"></a>
+            </button>
+            <!-- モーダル本体【JS実装の為】のクラス指定 -->
+            <div id="modal" class="modal is-hidden">
+                <!-- モーダル本体【CSS実装の為】のクラス指定 -->
+                <div class="modal-content">
+                    <!-- モーダルを閉じるボタン【JS実装の為】のクラス指定 -->
+                    <span class="close" onclick="closeModal()">
+                        <!-- 閉じる条件先を指定 -->
+                        <a href="#"><img class="閉" src="images/モーダル閉じる画像.png"></a>
+                    </span>
+                    <!-- モーダル内部のコンテンツ -->
+                    <div class="モーダル">
+                        <h2 class="モーダルタイトル">寧夏夜市</h2>
+                        <div class="モーダルコンテンツ1">
+                            <span class="スマホ"><img class="モーダル画像" src="images/寧夏夜市画像.png"></span>
+                            <span class="PC"><img class="モーダル画像" src="images/PC寧夏夜市画像.png"></span>
+                            <div class="モーダルコンテンツ">
+                                <p class="モーダル説明">
+                                    寧夏路夜市は台湾伝統の屋台料理やB級グルメがメイン<br>
+                                    の夜市です。特に大同区の圓環付近には懐かしいグルメ<br>
+                                    がたくさん集まっていますので、思う存分味わってくだ<br>
+                                    さい。また、ここの夜市は歩道と車道が分かれているの<br>
+                                    <!-- この部分をbody内の適切な場所に追加します -->
+                                    で、食事やショッピングに便利です。食の夜市とも言わ<br>
+                                    れる寧夏路夜市には毎日、大勢の人々が訪れています。
+                                </p>
+                                <div class="モーダル1">
+                                    <p>営業時間</p>
+                                    <p>日曜日17:00 - 25:00</p>
+                                    <p>月曜日17:00 - 25:00</p>
+                                    <p>火曜日17:00 - 25:00</p>
+                                    <p>水曜日17:00 - 25:00</p>
+                                    <p>木曜日17:00 - 25:00</p>
+                                    <p>金曜日17:00 - 25:00</p>
+                                    <p>土曜日17:00 - 25:00</p>
+                                    <!-- この部分をbody内の適切な場所に追加します -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- トップへ戻るボタン -->
+    <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">Top</button>
+    <!-- フッター部分（PC版） -->
+    <footer class="pc-footer">
+        <nav>
+            <ul>
+                <li><a href="#about">自己紹介</a></li>
+                <li><a href="#experience">経歴/学歴</a></li>
+                <li><a href="#projects">プロジェクト</a></li>
+                <li><a href="#skills">スキル</a></li>
+                <li><a href="port1/index.html">ポートフォリオ1</a></li>
+                <li><a href="port2/index.html">ポートフォリオ2</a></li>
+                <li><a href="port3/index.html">ポートフォリオ3</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="scripts/scripts.js"></script>
+</body>
+
+</html>
