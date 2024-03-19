@@ -1,0 +1,852 @@
+@charset "UTF-8";
+
+/* PC用 */
+@media screen and (min-width: 768px) {
+    .sp {
+        display: none;
+    }
+
+    body {
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        font-size: 24px;
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    header {
+        background-color: #EDE0D4;
+    }
+
+    .top {
+        display: flex;
+        padding: 20px;
+    }
+
+    .headericon {
+        padding-left: 600px;
+        padding-right: 420px;
+    }
+
+    .login {
+        padding-right: 40px;
+    }
+
+    /* ここから下がハンバーガーメニュー*/
+    /* チェックボックスを非表示にする */
+    .drawer_hidden {
+        display: none;
+    }
+
+    /* ハンバーガーアイコンの設置スペース */
+    .drawer_open {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 35px;
+        left: 95px;
+        z-index: 100;
+        cursor: pointer;
+    }
+
+    /* ハンバーガーメニューのアイコン */
+    .drawer_open span,
+    .drawer_open span:before,
+    .drawer_open span:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 50px;
+        background: #7F5539;
+        transition: 0.5s;
+        position: absolute;
+    }
+
+    /* 三本線の一番上の棒の位置調整 */
+    .drawer_open span:before {
+        bottom: 20px;
+    }
+
+    /* 三本線の一番下の棒の位置調整 */
+    .drawer_open span:after {
+        top: 20px;
+    }
+
+    /* アイコンがクリックされたら真ん中の線を透明にする */
+    #drawer_input:checked~.drawer_open span {
+        background: rgba(255, 255, 255, 0);
+    }
+
+    /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+    #drawer_input:checked~.drawer_open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+        background-color: #FFFFFF;
+    }
+
+    #drawer_input:checked~.drawer_open span::after {
+        top: 0;
+        transform: rotate(-45deg);
+        background-color: #FFFFFF;
+    }
+
+    /* メニューのデザイン*/
+    .nav_content {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        bottom: 100%;
+        left: 0%;
+        /* メニューを画面の外に飛ばす */
+        z-index: 99;
+        background: #7F5539;
+        transition: .5s;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    /* メニュー黒ポチを消す */
+    .nav_list {
+        list-style: none;
+    }
+
+    .nav_item a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        border-bottom: 1px solid #FFFFFF;
+        width: 560px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* アイコンがクリックされたらメニューを表示 */
+    #drawer_input:checked~.nav_content {
+        bottom: 0;
+    }
+
+    /* ドロワーここまで */
+    /* 検索窓ここから */
+    .search {
+        padding-right: 100px;
+        background-color: #B392AC;
+    }
+
+    .search div {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-top: 12px;
+        padding-bottom: 15px;
+    }
+
+    .search input[type="image"] {
+        background-color: #D9D9D9;
+        padding: 9px 9px;
+        border: 1px solid #7F5539;
+    }
+
+    .search input[type="text"] {
+        width: 318px;
+        height: 37px;
+        background-color: #fff;
+        border: 1px solid #000000;
+
+    }
+
+    /* パンくず */
+    .pan p {
+        font-size: 12px;
+        color: #7F5539;
+        border-bottom: 1px solid #7F5539;
+        padding: 12px;
+        padding-left: 100px;
+    }
+
+    h1 {
+        font-size: 12px;
+        border-bottom: 1px solid #B392AC;
+        padding: 12px;
+        padding-left: 100px;
+    }
+
+    h2 {
+        font-size: 20px;
+        max-width: 120px;
+        margin: 32px auto;
+        border-bottom: 2px solid #FFD233;
+    }
+
+    h2 {
+        font-size: 32px;
+        max-width: 225px;
+        margin: auto auto 120px;
+        border-bottom: 2px solid #FFD233;
+    }
+
+    h2 {
+        font-size: 32px;
+        max-width: 128px;
+        margin: 100px auto 160px;
+        border-bottom: 2px solid #FFD233;
+    }
+
+    h3 {
+        text-align: center;
+        color: #7F5539;
+        margin-bottom: 120px;
+    }
+
+    .top1-3,
+    .top4-6 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .ccdo1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 80px auto 140px;
+    }
+
+    .do1 {
+        margin-right: 40px;
+    }
+
+    .ccdo1 dt {
+        color: #7F5539;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #E6CCB2;
+    }
+
+    .ccdo1 dd {
+        padding: 40px;
+        border-bottom: 1px solid #E6CCB2;
+        color: #7F5539;
+    }
+
+    .price {
+        margin: 40px;
+        color: #BF0000;
+    }
+
+    .ccdo1 input[type="text"] {
+        width: 80px;
+        height: 52px;
+        background-color: #fff;
+        border: 1px solid #000000;
+        margin-right: 8px;
+    }
+
+    .cartbotan {
+        margin-left: 20px;
+    }
+
+    .favoritebutton {
+        width: 52px;
+        height: 52px;
+    }
+
+
+    .completed {
+        margin: 40px;
+    }
+
+    .completed p {
+        font-size: 12px;
+        text-align: center;
+        cursor: #7F5539;
+        line-height: 2;
+        border: 2px solid #F7D1CD;
+        padding: 20px;
+    }
+
+    .cart-,
+    .credit_card- {
+        color: #7F5539;
+        font-size: 12px;
+        text-align: right;
+    }
+
+    .cart- p,
+    .credit_card- p {
+        margin-right: 40px;
+    }
+
+    .credit_card- p {
+        margin-bottom: 80px;
+    }
+
+    .input {
+        display: flex;
+    }
+
+    .required {
+        color: #FF0000;
+    }
+
+    input {
+        border: 1px solid #000000;
+    }
+
+
+
+
+    .topdo1 {
+        margin-bottom: 80px;
+    }
+
+    .topdo2 {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 80px;
+    }
+
+    .topdo3 {
+        text-align: center;
+        margin-bottom: 80px;
+    }
+
+    .topdo4 {
+        margin-bottom: 80px;
+    }
+
+
+    .top1-3,
+    .top4-6 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .rank {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    dt {
+        margin-bottom: 20px;
+    }
+
+    dd {
+        color: #7F5539;
+        margin-bottom: 20px;
+    }
+
+    dd p {
+        color: #BF0000;
+    }
+
+    .cartbotan {
+        margin-bottom: 120px;
+    }
+
+    /* 以下footer */
+    footer {
+        background-color: #EDE0D4;
+    }
+
+    .footernav {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 16px;
+        align-items: center;
+        margin-left: 100px;
+        margin-bottom: 64px;
+        padding-top: 20px;
+        color: #7F5539;
+    }
+
+    .footernav li {
+        padding: 12px 64px 12px 12px;
+        border-left: 2px solid #B392AC;
+    }
+
+    .footerlogo {
+        text-align: center;
+        margin-bottom: 72px;
+    }
+
+    .sns {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .sns span {
+        margin: auto 40px;
+    }
+
+    .copy {
+        text-align: center;
+        padding: 20px;
+        border-top: 1px solid #7F5539;
+        color: #7F5539;
+    }
+}
+
+/* スマホ用 */
+@media screen and (max-width: 768px) {
+    .pc {
+        display: none;
+    }
+
+    body {
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        font-size: 20px;
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    header {
+        background-color: #EDE0D4;
+    }
+
+    .top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
+    }
+
+    .headericon {
+        padding-left: 150px;
+        padding-right: 60px;
+        max-height: 53px;
+    }
+
+    .login {
+        padding-right: 10px;
+        max-height: 35px;
+    }
+
+    .cart {
+        max-height: 35px;
+    }
+
+    /* ここから下がハンバーガーメニュー*/
+    /* チェックボックスを非表示にする */
+    .drawer_hidden {
+        display: none;
+    }
+
+    /* ハンバーガーアイコンの設置スペース */
+    .drawer_open {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 24px;
+        left: 12px;
+        z-index: 100;
+        cursor: pointer;
+    }
+
+    /* ハンバーガーメニューのアイコン */
+    .drawer_open span,
+    .drawer_open span:before,
+    .drawer_open span:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 25px;
+        background: #7F5539;
+        transition: 0.5s;
+        position: absolute;
+    }
+
+    /* 三本線の一番上の棒の位置調整 */
+    .drawer_open span:before {
+        bottom: 10px;
+    }
+
+    /* 三本線の一番下の棒の位置調整 */
+    .drawer_open span:after {
+        top: 10px;
+    }
+
+    /* アイコンがクリックされたら真ん中の線を透明にする */
+    #drawer_input:checked~.drawer_open span {
+        background: rgba(255, 255, 255, 0);
+    }
+
+    /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+    #drawer_input:checked~.drawer_open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+        background-color: #FFFFFF;
+    }
+
+    #drawer_input:checked~.drawer_open span::after {
+        top: 0;
+        transform: rotate(-45deg);
+        background-color: #FFFFFF;
+    }
+
+    /* メニューのデザイン*/
+    .nav_content {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        bottom: 100%;
+        left: 0%;
+        /* メニューを画面の外に飛ばす */
+        z-index: 99;
+        background: #7F5539;
+        transition: .5s;
+        padding-top: 20px;
+    }
+
+    .dorower_icon {
+        margin-left: 270px;
+        margin-bottom: 60px;
+    }
+
+
+    .nav_item a {
+        display: block;
+        color: #fff;
+        font-size: 16px;
+        padding: 16px 12px;
+        border-bottom: 1px solid #FFFFFF;
+    }
+
+    /* アイコンがクリックされたらメニューを表示 */
+    #drawer_input:checked~.nav_content {
+        bottom: 0;
+    }
+
+    /* ドロワーここまで */
+    /* 検索窓ここから */
+    .search {
+        background-color: #EDE0D4;
+    }
+
+    .search div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 8px;
+    }
+
+    .search input[type="image"] {
+        background-color: #D9D9D9;
+        padding: 9px 8px;
+        border: 1px solid #7F5539;
+    }
+
+    .search input[type="text"] {
+        width: 318px;
+        height: 37px;
+        background-color: #fff;
+        border: 1px solid #7F5539;
+
+    }
+
+    /* 検索窓ここまで */
+    /* パンくず */
+    .pan p {
+        font-size: 12px;
+        color: #7F5539;
+        border-bottom: 1px solid #7F5539;
+        padding: 12px;
+        padding-left: 20px;
+    }
+
+    h1 {
+        font-size: 12px;
+        border-bottom: 1px solid #7F5539;
+        padding: 12px;
+        padding-left: 20px;
+    }
+
+
+    h2 {
+        font-size: 20px;
+        max-width: 120px;
+        margin: 32px auto;
+        border-bottom: 2px solid #FFD233;
+    }
+
+    .completed {
+        margin: 40px;
+    }
+
+    .completed p {
+        font-size: 12px;
+        text-align: center;
+        cursor: #7F5539;
+        line-height: 2;
+        border: 2px solid #F7D1CD;
+        padding: 20px;
+    }
+
+    .cart-,
+    .credit_card- {
+        color: #7F5539;
+        font-size: 12px;
+        text-align: right;
+    }
+
+    .cart- p,
+    .credit_card- p {
+        margin-right: 40px;
+    }
+
+    .credit_card- p {
+        margin-bottom: 80px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .input {
+        display: flex;
+    }
+
+    .required {
+        color: #FF0000;
+    }
+
+    input {
+        max-width: 295px;
+        max-height: 20px;
+        border: 1px solid #000000;
+        text-align: center;
+    }
+
+    .address1 {
+        max-width: 60px;
+    }
+
+    .address2 {
+        max-width: 100px;
+    }
+
+    .password-requirements {
+        font-size: 8px;
+        color: #FF0000;
+    }
+
+
+    .topdo1 {
+        margin-bottom: 20px;
+    }
+
+    .topdo1 img {
+        max-height: 200px;
+        max-width: 375px;
+    }
+
+    .topdo2 {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 20px;
+    }
+
+    .topdo2 img {
+        max-width: 157px;
+        max-height: 157px;
+    }
+
+    .topdo3 {
+        text-align: center;
+        margin: 20px 20px;
+    }
+
+    .topdo3 img {
+        max-width: 335px;
+        max-height: 83px;
+    }
+
+    .topdo4 {
+        margin-bottom: 20px;
+    }
+
+    .topdo4 img {
+        max-width: 375px;
+        height: 568px;
+        object-fit: cover;
+    }
+
+
+    h2 {
+        font-size: 20px;
+        max-width: 140px;
+        margin: auto auto 80px;
+        border-bottom: 2px solid #FFD233;
+    }
+
+    /* spは見え方が1.4,2.5,3.6になってるので後で修正 */
+    .topranking {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .topranking,
+    .variety {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .do1 {
+        width: 88%;
+        margin: 20px 20px;
+    }
+
+    .ccdo1 dt {
+        color: #7F5539;
+        font-size: 16px;
+        border-bottom: 1px solid #E6CCB2;
+        margin-left: 20px;
+    }
+
+    .ccdo1 dd {
+        color: #7F5539;
+        font-size: 16px;
+        padding: 20px 16px;
+        border-bottom: 1px solid #E6CCB2;
+    }
+
+    .price {
+        color: #BF0000;
+        margin: 20px 20px 40px;
+        font-size: 16px;
+    }
+
+    .form {
+        display: flex;
+        margin: 20px;
+        margin-bottom: 80px;
+    }
+
+    .ccdo1 input[type="text"] {
+        width: 56px;
+        height: 36px;
+        background-color: #fff;
+        border: 1px solid #000000;
+        margin-right: 8px;
+    }
+
+    .cartbotan {
+        margin-left: 10px;
+        max-width: 160px;
+        max-height: 36px;
+    }
+
+    .favoritebutton {
+        max-width: 36px;
+        max-height: 34px;
+        margin-left: 4px;
+    }
+
+
+
+    .rank {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .rank img {
+        max-width: 35px;
+        max-height: 35px;
+    }
+
+    dt {
+        margin-bottom: 20px;
+    }
+
+    dt img {
+        max-width: 157px;
+        max-height: 157px;
+    }
+
+    dd {
+        font-size: 16px;
+        color: #7F5539;
+        margin-bottom: 20px;
+    }
+
+    dd p {
+        color: #BF0000;
+    }
+
+    .cartbotan {
+        max-width: 148px;
+        max-height: 36px;
+        margin-bottom: 80px;
+    }
+
+    /* 以下footer */
+    footer {
+        background-color: #EDE0D4;
+    }
+
+    .footernav {
+        font-size: 12px;
+        align-items: center;
+        margin-left: 12px;
+        margin-bottom: 32px;
+        padding-top: 12px;
+        color: #7F5539;
+    }
+
+    .footernav li {
+        padding: 4px 36px 4px 12px;
+        margin-bottom: 20px;
+        border-left: 2px solid #B392AC;
+    }
+
+    .sns {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 12px;
+        margin-bottom: 20px;
+    }
+
+    .sns span {
+        margin: auto 20px;
+    }
+
+    .footerlogo img {
+        max-width: 72px;
+        max-height: 64px;
+        margin-right: 12px;
+        margin-bottom: 8px;
+        margin-left: 280px;
+    }
+
+    .copy {
+        text-align: center;
+        font-size: 10px;
+        padding: 12px;
+        border-top: 1px solid #7F5539;
+        color: #7F5539;
+    }
+}

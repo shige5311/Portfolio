@@ -1,0 +1,240 @@
+@charset "UTF-8";
+
+/* PC用 */
+@media screen and (min-width: 768px) {
+
+  /* CSSコード */
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    background: #fff;
+    position: relative;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  /* ここから下がハンバーガーメニューに関するCSS */
+
+  /* チェックボックスを非表示にする */
+  .drawer_hidden {
+    display: none;
+  }
+
+  /* ハンバーガーアイコンの設置スペース */
+  .drawer_open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    z-index: 100;
+    /* 重なり順を一番上にする */
+    cursor: pointer;
+  }
+
+  /* ハンバーガーメニューのアイコン */
+  .drawer_open span,
+  .drawer_open span:before,
+  .drawer_open span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background: #333;
+    transition: 0.5s;
+    position: absolute;
+  }
+
+  /* 三本線の一番上の棒の位置調整 */
+  .drawer_open span:before {
+    bottom: 8px;
+  }
+
+  /* 三本線の一番下の棒の位置調整 */
+  .drawer_open span:after {
+    top: 8px;
+  }
+
+  /* アイコンがクリックされたら真ん中の線を透明にする */
+  #drawer_input:checked~.drawer_open span {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+  #drawer_input:checked~.drawer_open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+
+  #drawer_input:checked~.drawer_open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  /* メニューのデザイン*/
+  .nav_content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    bottom: 100%;
+    left: 0%;
+    /* メニューを画面の外に飛ばす */
+    z-index: 99;
+    background: rgb(110, 110, 110);
+    transition: .5s;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  /* メニュー黒ポチを消す */
+  .nav_list {
+    list-style: none;
+  }
+
+  .nav_item a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /* アイコンがクリックされたらメニューを表示 */
+  #drawer_input:checked~.nav_content {
+    bottom: 0;
+    /* メニューを画面に入れる */
+
+  }
+}
+
+/* スマホ用 */
+@media screen and (max-width: 768px) {
+  body {
+    margin: auto;
+  }
+
+  .top {
+    display: flex;
+    padding: 16px;
+  }
+
+  .headericon {
+    width: 62px;
+    height: 53px;
+    margin-left: 120px;
+    margin-right: 62px;
+  }
+
+  .cart {
+    margin: auto 12px;
+  }
+
+  .menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .menu-button {
+    display: block;
+    position: fixed;
+    top: 32px;
+    left: 95px;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .bar {
+    display: block;
+    width: 50px;
+    height: 1px;
+    margin: 15px 0;
+    background-color: #7F5539;
+    transition: 0.4s;
+  }
+
+  .close-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 24px;
+    color: white;
+    display: none;
+    /* 初期状態では非表示 */
+  }
+
+  #menu-toggle:checked~.menu-button .bar:nth-child(1) {
+    transform: rotate(45deg) translate(-2px, 3px);
+  }
+
+  #menu-toggle:checked~.menu-button .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  #menu-toggle:checked~.menu-button .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -13px);
+  }
+
+  #menu-toggle:checked~.menu-button+.close-btn {
+    display: block;
+    /* ドロワー展開時に表示 */
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  /* ドロワー展開時状態 */
+  .menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(127, 85, 57, 0.75);
+    opacity: 0;
+    /* 初期状態では透明に設定 */
+    transition: opacity 0.4s, top 0.4s;
+    /* opacity にもトランジションを追加 */
+    z-index: 1;
+    overflow-y: auto;
+  }
+
+  #menu-toggle:checked~.menu {
+    top: 0;
+    opacity: 1;
+    /* ドロワー展開時に不透明に設定 */
+  }
+
+  .menu ul {
+    list-style: none;
+    padding: 20px;
+  }
+
+  .menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    padding: 10px 0;
+    transition: 0.2s;
+    text-align: center;
+  }
+
+  .menu hr {
+    width: 560px;
+    color: white;
+    margin-left: 400px;
+  }
+
+  form {
+    background-color: #B392AC;
+  }
+}

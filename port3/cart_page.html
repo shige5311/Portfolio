@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="common/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/cart_page.css">
+    <title>架空のドーナツショップ「C.C.Donuts」のショッピングサイト | カートページ</title>
+</head>
+
+<body>
+    <header class="header">
+        <!-- ハンバーガーメニュー部分 -->
+        <div class="nav">
+
+            <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+            <input id="drawer_input" class="drawer_hidden" type="checkbox">
+
+            <!-- ハンバーガーアイコン -->
+            <label for="drawer_input" class="drawer_open"><span></span></label>
+
+            <!-- メニュー -->
+            <nav class="nav_content">
+                <!-- ドロワーメニューの中身 -->
+                <div>
+                    <img class="dorower_icon" src="images/header/pchetaerlogo.png" alt="">
+                </div>
+                <ul class="nav_list">
+                    <li class="nav_item"><a href="#">TOP</a></li>
+                    <li class="nav_item"><a href="#">商品一覧</a></li>
+                    <li class="nav_item"><a href="#">よくある質問</a></li>
+                    <li class="nav_item"><a href="#">問い合わせ</a></li>
+                    <li class="nav_item"><a href="#">当サイトのポリシー</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class=top>
+            <img class="headericon" src="images/header/pchetaerlogo.png" alt="">
+            <a href="#"><img class="login" src="images/header/logingroup.png" alt=""></a>
+            <a href="#"><img class="cart" src="images/header/cartgroup.png" alt=""></a>
+        </div>
+    </header>
+    <main>
+        <!-- 仮実装 -->
+        <section class="search">
+            <form method="get" action="http://www.google.co.jp/search" target="_blank">
+                <div>
+                    <input type="image" src="images/header/sort.png" alt="検索する">
+                    <input type="text" name="q" value="">
+                </div>
+                <input type="hidden" name="hl" value="ja">
+                <input type="hidden" name="sitesearch" value="#">
+            </form>
+        </section>
+        <nav class="pan">
+            <p>
+                <a href="index.html">TOP</a>
+                ＞
+                <a href="cart_page.html">カート</a>
+            </p>
+        </nav>
+        <!-- 仮ゲスト -->
+        <h1>ドーナツ太郎 様</h1>
+        <!-- 仮合計商品 -->
+        <form action="//www-creators.com/rsc/receiver.php" method="post">
+            <input type="search" name="s" value="">
+            <p>現在 商品2点</p>
+            <p>ご注文小計:税込¥5,000</p>
+
+            <input type="image" src="images/syousai/bo1.png" alt="購入確認へ進む">
+        </form>
+        <section>
+            <div class="ccdo1">
+                <form method="post" action="">
+                    <img src="images/syousai/ccdo2.png" alt="">
+                    <dl>
+                        <dt>CCドーナツ 当店オリジナル（5個入り）</dt>
+                        <dd>
+                            <p>税込 ￥1,500</p>
+                            <p>数量<input type="text" name="count" value="数量">個</p>
+                        </dd>
+                    </dl>
+                    <input type="image" src="images/syousai/bo2.png" alt="再計算する">
+                    <p><input type="reset" value="削除する"></p>
+                </form>
+            </div>
+            <div class="ccdo2">
+                <form method="post" action="">
+                    <img src="images/syousai/ccdo3.png" alt="">
+                    <dl>
+                        <dt>フルーツドーナツセット（12個入り）</dt>
+                        <dd>
+                            <p>税込 ￥3,500</p>
+                            <p>数量<input type="text" name="count" value="数量">個</p>
+                        </dd>
+                    </dl>
+                    <input type="image" src="images/syousai/bo2.png" alt="再計算する">
+                    <p><input type="reset" value="削除する"></p>
+                </form>
+            </div>
+        </section>
+        <!-- 仮合計商品 -->
+        <form action="//www-creators.com/rsc/receiver.php" method="post">
+            <input type="search" name="s" value="">
+            <p>現在 商品2点</p>
+            <p>ご注文小計:税込¥5,000</p>
+
+            <input type="image" src="images/syousai/bo1.png" alt="購入確認へ進む">
+        </form>
+        <a href="product_list.html"><img src="images/syousai/bo3.png"></a>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <div class="footernav">
+                    <li><a href="#">よくある質問</a></li>
+                    <li><a href="#">お問い合わせ</a></li>
+                    <li><a href="#">当サイトのポリシー</a></li>
+                </div>
+
+            </ul>
+        </nav>
+        <div class="footerlogo">
+            <img class="pc" src="images/footer/pcfotter.png" alt="">
+        </div>
+        <div class="sns">
+            <a href="#"><img src="images/footer/facebook.png" alt=""></a>
+            <a href="#"><span><img src="images/footer/inst.png" alt=""></span></a>
+            <a href="#"><img src="images/footer/x.png" alt=""></a>
+        </div>
+        <div class="footerlogo">
+            <img class="sp" src="images/footer/pcfotter.png" alt="">
+        </div>
+        <div class="copy">
+            <p>Copyright (C) 2023 c.c.dounuts</p>
+        </div>
+    </footer>
+</body>
+
+</html>
