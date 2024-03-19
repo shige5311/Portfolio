@@ -1,0 +1,1263 @@
+@charset "utf-8";
+
+@media screen and (max-width: 768px) {
+  .PC {
+    display: none;
+  }
+
+  .パンくず1 {
+    display: none;
+  }
+
+  .hr2 {
+    display: none;
+  }
+
+  .hr3 {
+    display: none;
+  }
+
+  .夜一2 {
+    display: none;
+  }
+
+  .夜一PC {
+    display: none;
+  }
+
+  .夜一PC1 {
+    display: none;
+  }
+
+
+  /* PCのグローバルメニューを非表示に */
+  .drawerTextPc {
+    visibility: collapse;
+  }
+
+  /* ドロワーアイコン */
+  .drawerIkon::after {
+    content: url(../images/do1.png);
+    position: absolute;
+    right: 0px;
+  }
+
+  .drawerBtn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .drawerNav {
+    height: 100%;
+    width: 260px;
+    background-color: #000;
+    color: #fff;
+    display: block;
+  }
+
+  .drawerBtnCrosed img {
+    padding: 10px 10px 0 0;
+    object-fit: cover;
+    width: 48px;
+    height: 48px;
+  }
+
+  .drawerMenu {
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .drawerText {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .drawerText li {
+    padding-bottom: 28px;
+  }
+
+  .menuNum1 {
+    font-size: 30px;
+    margin: 32px auto 32px auto;
+  }
+
+  .menuNum2 {
+    padding-bottom: 40px;
+  }
+
+  .menuNum3 a,
+  .menuNum4 a,
+  .menuNum5 a,
+  .menuNum6 a,
+  .menuNum7 a {
+    border-bottom: 1px solid #fff;
+  }
+
+  #nav {
+    position: fixed;
+    right: -270px;
+    top: 0;
+    height: 100%;
+    width: 260px;
+    z-index: 999;
+  }
+
+  #nav.show {
+    transform: translate3d(-270px, 0, 0);
+  }
+
+  /* ドロワー開閉アニメーションスピード */
+  #wrapper,
+  #nav {
+    transition: transform 0.3s;
+  }
+
+  header {
+    background: url(../images/hero1.png) no-repeat center/cover;
+    max-width: 100%;
+  }
+
+  body {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+  }
+
+  img {
+    max-width: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .ヘッダー .スマホ {
+    width: 111px;
+    margin: auto auto 72px 20px;
+  }
+
+  .メインロゴ .スマホ {
+    width: 199px;
+    margin-left: 88px;
+  }
+
+  .snsIkon {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
+
+  .facebook,
+  .Instagram {
+    margin-bottom: 20px;
+  }
+
+  .Twitter {
+    margin-bottom: 4px;
+  }
+
+  .トップページ説明 {
+    color: white;
+    font-weight: bold;
+    margin-left: 108px;
+  }
+
+  .パンくず {
+    border-bottom: 1px solid #000;
+    text-align: left;
+    margin: 8px;
+  }
+
+  h2 {
+    text-align: center;
+    margin: 20px auto 40px;
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .説明1 {
+    text-align: center;
+    background-color: rgba(96, 174, 204, 0.2);
+    padding: 8px 16px;
+    margin: 20px 20px;
+    line-height: 19px;
+  }
+
+  .観光名所 .説明1 {
+    padding: 8px 36px;
+  }
+
+  .説明2 {
+    padding: 8px 20px;
+    margin: 20px auto 40px;
+    background-color: rgba(96, 174, 204, 0.2);
+    text-align: center;
+  }
+
+  .説明3 {
+    background-color: rgba(96, 174, 204, 0.2);
+    line-height: 19px;
+    padding: 8px 36px;
+    margin: 20px;
+    text-align: center;
+  }
+
+  .説明4 {
+    margin: 12px;
+  }
+
+  .説明4 .hr1 {
+    margin-bottom: 12px;
+  }
+
+  .説明4 p {
+    text-align: center;
+  }
+
+  .説明5 {
+    text-align: center;
+  }
+
+  span {
+    font-weight: bold;
+  }
+
+  .観光名所 dl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .サブ画像 {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .サブ画像 img {
+    max-width: 35%;
+  }
+
+  .台北101 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .hr {
+    margin: auto;
+    margin-bottom: 40px;
+  }
+
+  .hr1 {
+    margin: auto;
+  }
+
+  .夜一1 {
+    margin-bottom: 60px;
+  }
+
+  .夜一スマホ {
+    height: 122px;
+    width: 183px;
+    margin: 40px 96px 20px;
+    text-align: center;
+  }
+
+  .夜一スマホ1 {
+    margin: auto 96px 40px;
+    width: 183px;
+  }
+
+  .夜一ボタン {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+  }
+
+  .アクセス画像 {
+    margin: 40px 20px;
+  }
+
+  .アクセス {
+    text-align: center;
+  }
+
+  .アクセス dd {
+    margin: 12px auto 20px;
+  }
+
+  .カード {
+    height: 61px;
+    width: 95px;
+    margin: 20px 140px 60px;
+  }
+
+  .topへ戻る {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    right: -300px;
+    bottom: 30px;
+  }
+
+  /* フッターエリア */
+  footer>.innerWrap {
+    background-color: #007AB7;
+  }
+
+  .flagOfTaiwan {
+    width: 32px;
+    height: 24px;
+    margin: 20px 171px;
+  }
+
+  footer p {
+    color: #fff;
+    padding: 12px 100px;
+
+  }
+
+  footer li {
+    padding-bottom: 4px;
+    border-bottom: 1px solid #fff;
+    line-height: 1.5;
+  }
+
+  .footerNav {
+    width: 195px;
+    height: 167px;
+    margin: 20px auto 40px;
+  }
+
+  .footerNav a {
+    color: #fff;
+    font-size: 12px;
+  }
+
+  .footerRogo {
+    width: 71px;
+    height: 28px;
+    float: left;
+    margin: 0 22px 0 20px;
+  }
+
+  .footRogos {
+    width: 150px;
+    margin-bottom: 22px;
+    display: flex;
+    justify-content: space-between;
+    /* float:left;
+    padding-bottom:22px; */
+  }
+
+  .foooterRogos img {
+    display: block;
+    margin: 20px;
+  }
+
+  .footerText {
+    text-align: center;
+    color: #fff;
+    border-top: 1px solid #6CBAD6;
+  }
+
+  .閉 {
+    max-width: 24px;
+    min-height: 24px;
+  }
+
+
+  /* モーダル開かれた際の背景状態 
+気になる場合背景色変更等*/
+  #modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(1, 128, 190, 0.9);
+  }
+
+  /* モーダル本体に対してのCSS */
+  #modal .modal-content {
+    background-color: rgba(1, 128, 190, 0.9);
+    margin: 30vh auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* JS用(要約：押されたらモーダル開く) */
+  #modal.is-hidden {
+    display: none;
+  }
+
+  /* JS用(要約：押されたらモーダル閉じる) */
+  #modal.is-shown {
+    display: block;
+  }
+
+  /* ドロワーメニュー参照 */
+  #modal .close {
+    color: black;
+    float: right;
+    font-size: 100%;
+    font-weight: bold;
+  }
+
+  /* ドロワーメニュー参照 */
+  #modal .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #modal1 {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(1, 128, 190, 0.9);
+  }
+
+  /* モーダル本体に対してのCSS */
+  #modal1 .modal-content {
+    background-color: rgba(1, 128, 190, 0.9);
+    margin: 30vh auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* JS用(要約：押されたらモーダル開く) */
+  #modal1.is-hidden {
+    display: none;
+  }
+
+  /* JS用(要約：押されたらモーダル閉じる) */
+  #modal1.is-shown {
+    display: block;
+  }
+
+  /* ドロワーメニュー参照 */
+  #modal1 .close {
+    color: black;
+    float: right;
+    font-size: 100%;
+    font-weight: bold;
+  }
+
+  /* ドロワーメニュー参照 */
+  #modal1 .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #modal2 {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(1, 128, 190, 0.9);
+  }
+
+  /* モーダル本体に対してのCSS */
+  #modal2 .modal-content {
+    background-color: rgba(1, 128, 190, 0.9);
+    margin: 30vh auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* JS用(要約：押されたらモーダル開く) */
+  #modal2.is-hidden {
+    display: none;
+  }
+
+  /* JS用(要約：押されたらモーダル閉じる) */
+  #modal2.is-shown {
+    display: block;
+  }
+
+  /* ドロワーメニュー参照 */
+  #modal2 .close {
+    color: black;
+    float: right;
+    font-size: 100%;
+    font-weight: bold;
+  }
+
+  /* ドロワーメニュー参照 */
+  #modal2 .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #modal3 {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(1, 128, 190, 0.9);
+  }
+
+  /* モーダル本体に対してのCSS */
+  #modal3 .modal-content {
+    background-color: rgba(1, 128, 190, 0.9);
+    margin: 30vh auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* JS用(要約：押されたらモーダル開く) */
+  #modal3.is-hidden {
+    display: none;
+  }
+
+  /* JS用(要約：押されたらモーダル閉じる) */
+  #modal3.is-shown {
+    display: block;
+  }
+
+  /* ドロワーメニュー参照 */
+  #modal3 .close {
+    color: black;
+    float: right;
+    font-size: 100%;
+    font-weight: bold;
+  }
+
+  /* ドロワーメニュー参照 */
+  #modal3 .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .モーダルタイトル {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .モーダル1 {
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .モーダル説明 {
+    color: #fff;
+    font-weight: bold;
+    line-height: 19px;
+    margin-bottom: 20px;
+  }
+
+  .モーダル説明1 {
+    color: #fff;
+    font-weight: bold;
+    line-height: 19px;
+  }
+
+  .モーダル画像 {
+    margin-bottom: 20px;
+  }
+
+  .モーダル dl {
+    margin-bottom: 40px;
+  }
+
+  #loading {
+    /*ローディングにかかる時間*/
+    transition: all 4s;
+    background-color: #007AB7;
+    z-index: 10000;
+    position: fixed;
+    /* top, right, bottom, left に対応する一括指定*/
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*主軸の方向や向き（通常または逆方向）を定義し
+    今回は積み重なるように配置する */
+    flex-direction: column;
+  }
+
+  .spin {
+    background-color: #007AB7;
+  }
+
+  .loaded {
+    /*要素の不透明度を設定します。 不透明度は要素の裏にある
+    コンテンツが隠れる度合いであり、透明度の逆*/
+    opacity: 0;
+    /*要素はあるけど見えない状態*/
+    visibility: hidden;
+  }
+
+}
+
+@media screen and (min-width: 769px) {
+  .スマホ {
+    display: none;
+  }
+
+  .パンくず {
+    display: none;
+  }
+
+  .hr1 {
+    display: none;
+  }
+
+  .夜一1 {
+    display: none;
+  }
+
+  .夜一スマホ {
+    display: none;
+  }
+
+  .夜一スマホ1 {
+    display: none;
+  }
+
+  img {
+    max-width: 100%;
+    background-repeat: no-repeat;
+  }
+
+  h3 {
+    font-size: 36px;
+  }
+
+  body {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 20px;
+  }
+
+  /* ドロワーメニューはそのままPC版向けに新たに作成し表示させる */
+  .drawerBtn {
+    display: none;
+  }
+
+  .drawerNav {
+    visibility: collapse;
+  }
+
+  .drawerTextPc {
+    visibility: visible;
+  }
+
+  .drawerTextPc {
+    display: block;
+    width: 700px;
+    position: absolute;
+    top: 40px;
+    left: 560px;
+    border-bottom: none;
+  }
+
+  .globalMenu {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .drawerTextPc .globalMenu li a {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .drawerTextPc .globalMenu li a:hover {
+    text-decoration: underline;
+  }
+
+  /* ハンバーガー消す */
+  .drawerIkon {
+    display: none;
+  }
+
+  header {
+    background: url(../images/hero2.png) no-repeat center/cover;
+    object-position: 50% 50%;
+  }
+
+  .メインロゴ .PC {
+    width: 300px;
+    margin-left: 367px;
+  }
+
+  .snsIkon {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .snsIkon span {
+    margin: 40px;
+  }
+
+  .トップページ説明 {
+    display: inline-block;
+    color: white;
+    line-height: 32px;
+    font-weight: bold;
+    margin-left: 720px;
+  }
+
+  .PC1 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+  }
+
+  .PC1 img {
+    width: 600px;
+  }
+
+  .PC2 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+  }
+
+  .PC2 img {
+    width: 290px;
+  }
+
+  .PC3 {
+    display: flex;
+    justify-content: space-evenly;
+    writing-mode: horizontal-tb;
+    line-height: 38px;
+  }
+
+  .PC3 dt {
+    width: 480px;
+    margin-bottom: 40px;
+  }
+
+  .パンくず1 {
+    border-bottom: 1px solid #000;
+    text-align: left;
+  }
+
+  .観光名所 h2 {
+    margin: 20px auto 80px 100px;
+  }
+
+  .観光名所 h3 {
+    margin-left: 100px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+  .hr {
+    margin: auto;
+    width: 480px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  .hr2 {
+    width: 480px;
+    margin: 36px;
+  }
+
+  .hr3 {
+    margin: auto;
+    width: 420px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  .説明1 {
+    background-color: rgba(96, 174, 204, 0.2);
+    padding: 20px 40px;
+    line-height: 32px;
+  }
+
+  .説明2 {
+    background-color: rgba(96, 174, 204, 0.2);
+    padding: 40px 40px;
+    line-height: 40px;
+    text-align: center;
+    width: 500px;
+  }
+
+  .説明2 span {
+    font-weight: bold;
+  }
+
+  .説明3 {
+    background-color: rgba(96, 174, 204, 0.2);
+    padding: 20px 40px;
+    line-height: 32px;
+  }
+
+  .説明4 {
+    width: 480px;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  .説明5 {
+    margin-left: 175px;
+    margin-bottom: 40px;
+  }
+
+  .夜一 span.hr2 {
+    margin-bottom: 400px;
+  }
+
+  .夜一2 {
+    margin-left: 710px;
+    margin-bottom: 80px;
+  }
+
+  .夜一 .夜一2 {
+    width: 540px;
+  }
+
+  .夜一 .夜一ボタン .PC {
+    width: 210px;
+  }
+
+  .夜一ボタン {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .夜一PC1 {
+    margin-right: 20px;
+  }
+
+  .交通手段 h2 {
+    margin: 20px auto 100px 80px;
+  }
+
+  .交通手段 .hr2 {
+    margin: 40px 790px 80px auto;
+    width: 420px;
+  }
+
+  .交通手段 .アクセス画像 img {
+    margin-bottom: 120px;
+  }
+
+  .アクセス {
+    padding: 20px 20px;
+  }
+
+  .アクセス dt {
+    text-align: center;
+  }
+
+  .アクセス dd {
+    text-align: center;
+  }
+
+  .topへ戻る {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    bottom: 900px;
+    left: 1200px;
+  }
+
+  .カード {
+    position: relative;
+    left: 890px;
+    margin: 40px auto;
+  }
+
+  /* フッター */
+  footer>.innerWrap {
+    /* background-color: rgba(0, 122, 183, 0.2); */
+    background-color: #007AB7;
+  }
+
+  .footerNav a {
+    color: #fff;
+  }
+
+  .footerText {
+    text-align: center;
+    color: #fff;
+    border-top: 1px solid #6CBAD6;
+  }
+
+  .footRogos {
+    width: 150px;
+    margin-bottom: 22px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .flagOfTaiwan {
+    width: 32px;
+    height: 24px;
+    margin: 20px 171px;
+  }
+
+  footer p {
+    color: #fff;
+    padding: 12px 100px;
+
+  }
+
+  footer li {
+    padding-bottom: 4px;
+    border-bottom: 1px solid #fff;
+    line-height: 1.5;
+  }
+
+  .flagOfTaiwan {
+    width: 64px;
+    height: 48px;
+    margin: 20px 650px;
+  }
+
+  .footerNav {
+    width: 332px;
+    height: 292px;
+    margin-left: 103px;
+    margin-bottom: 20px;
+  }
+
+  .footerNav a {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  .footerSec {
+    display: grid;
+    grid-template-rows: 116px 292px;
+    grid-template-columns: 103px 332px 120px 270px 183px 103px;
+  }
+
+  .footerNav {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    margin: 0;
+    margin-top: 40px;
+  }
+
+  .footerRogo {
+    width: 256px;
+    height: 103px;
+    grid-row: 2/3;
+    grid-column: 4/5;
+    margin: 0;
+    margin-top: 180px;
+  }
+
+  .footRogos {
+    width: 183px;
+    height: 32px;
+    grid-row: 2/3;
+    grid-column: 6/7;
+    margin: 0;
+    margin-top: 240px;
+  }
+
+
+  /* モーダル開かれた際の背景状態 
+気になる場合背景色変更等*/
+  #modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(1, 128, 190, 0.9);
+  }
+
+  /* モーダル本体に対してのCSS */
+  #modal .modal-content {
+    background-color: rgba(1, 128, 190, 0.9);
+    margin: 30vh auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* JS用(要約：押されたらモーダル開く) */
+  #modal.is-hidden {
+    display: none;
+  }
+
+  /* JS用(要約：押されたらモーダル閉じる) */
+  #modal.is-shown {
+    display: block;
+  }
+
+  /* ドロワーメニュー参照 */
+  #modal .close {
+    color: black;
+    float: right;
+    font-size: 100%;
+    font-weight: bold;
+  }
+
+  /* ドロワーメニュー参照 */
+  #modal .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #modal1 {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(1, 128, 190, 0.9);
+  }
+
+  /* モーダル本体に対してのCSS */
+  #modal1 .modal-content {
+    background-color: rgba(1, 128, 190, 0.9);
+    margin: 30vh auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* JS用(要約：押されたらモーダル開く) */
+  #modal1.is-hidden {
+    display: none;
+  }
+
+  /* JS用(要約：押されたらモーダル閉じる) */
+  #modal1.is-shown {
+    display: block;
+  }
+
+  /* ドロワーメニュー参照 */
+  #modal1 .close {
+    color: black;
+    float: right;
+    font-size: 100%;
+    font-weight: bold;
+  }
+
+  /* ドロワーメニュー参照 */
+  #modal1 .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #modal2 {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(1, 128, 190, 0.9);
+  }
+
+  /* モーダル本体に対してのCSS */
+  #modal2 .modal-content {
+    background-color: rgba(1, 128, 190, 0.9);
+    margin: 30vh auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* JS用(要約：押されたらモーダル開く) */
+  #modal2.is-hidden {
+    display: none;
+  }
+
+  /* JS用(要約：押されたらモーダル閉じる) */
+  #modal2.is-shown {
+    display: block;
+  }
+
+  /* ドロワーメニュー参照 */
+  #modal2 .close {
+    color: black;
+    float: right;
+    font-size: 100%;
+    font-weight: bold;
+  }
+
+  /* ドロワーメニュー参照 */
+  #modal2 .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #modal3 {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(1, 128, 190, 0.9);
+  }
+
+  /* モーダル本体に対してのCSS */
+  #modal3 .modal-content {
+    background-color: rgba(1, 128, 190, 0.9);
+    margin: 30vh auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* JS用(要約：押されたらモーダル開く) */
+  #modal3.is-hidden {
+    display: none;
+  }
+
+  /* JS用(要約：押されたらモーダル閉じる) */
+  #modal3.is-shown {
+    display: block;
+  }
+
+  /* ドロワーメニュー参照 */
+  #modal3 .close {
+    color: black;
+    float: right;
+    font-size: 100%;
+    font-weight: bold;
+  }
+
+  /* ドロワーメニュー参照 */
+  #modal3 .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .閉 {
+    max-width: 36px;
+    min-height: 36px;
+  }
+
+  .モーダルコンテンツ1 {
+    display: flex;
+  }
+
+  .モーダルコンテンツ {
+    margin-left: 520px;
+  }
+
+  .モーダルタイトル {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 103px;
+    margin-bottom: 20px;
+  }
+
+  .モーダル1 {
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    margin: 20px auto 40px;
+  }
+
+  .モーダル説明 {
+    color: #fff;
+    font-weight: bold;
+    line-height: 19px;
+  }
+
+  .モーダル説明1 {
+    color: #fff;
+    font-weight: bold;
+    line-height: 19px;
+  }
+
+  .モーダル画像 {
+    max-width: 600px;
+    margin-left: 103px;
+  }
+
+  .モーダル dl {
+    margin-bottom: 40px;
+  }
+
+  #loading {
+    /*ローディングにかかる時間*/
+    transition: all 4s;
+    background-color: #007AB7;
+    z-index: 10000;
+    position: fixed;
+    /* top, right, bottom, left に対応する一括指定*/
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*主軸の方向や向き（通常または逆方向）を定義し
+    今回は積み重なるように配置する */
+    flex-direction: column;
+  }
+
+  .spin {
+    background-color: #007AB7;
+  }
+
+  .loaded {
+    /*要素の不透明度を設定します。 不透明度は要素の裏にある
+    コンテンツが隠れる度合いであり、透明度の逆*/
+    opacity: 0;
+    /*要素はあるけど見えない状態*/
+    visibility: hidden;
+  }
+
+}
